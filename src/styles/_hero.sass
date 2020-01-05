@@ -1,0 +1,49 @@
+.main-hero
+  background-color: darken($primary-color, 10%)
+  color: $white
+  height: 90vh
+  max-height: 550px
+  display: flex
+  align-items: flex-end
+  background-image: url("../assets/moi-torrijos-cuidad-de-panama.jpg")
+  background-position: center top
+  background-size: cover
+  background-repeat: no-repeat
+  @media screen and ( max-width: 953px )
+    max-height: none
+    height: auto
+    width: 100%
+
+.hero-text-image
+  max-width: 980px
+  margin: 0 auto
+  display: flex
+  flex-flow: row wrap
+  align-items: center
+  justify-content: center
+
+.hero-text
+  text-align: center
+  min-width: 500px
+  @media screen and ( max-width: 500px )
+    min-width: 0
+    width: 100%
+    padding: 0.25rem
+  
+  h2
+    font-weight: normal
+
+    @media screen and ( max-width: 500px )
+      font-size: 1.4rem
+
+  h1
+    margin: 0
+    font-weight: 600
+    letter-spacing: 1.1px
+
+    @media screen and ( max-width: 500px )
+        font-size: 1.8rem
+
+.hero-image
+  align-self: flex-end
+  transform: translateY(4px)
