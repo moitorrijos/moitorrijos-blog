@@ -11,7 +11,7 @@ export default () => (
   <ul className="navigation">
     <li>
       <Link to="/">
-        <img 
+        <img
           className="logo"
           src={logo}
           alt="Moi Torrijos Logo all rights reserved"

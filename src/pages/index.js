@@ -1,23 +1,17 @@
 import React from "react"
 import MainLayout from '../components/main-layout'
-import moitorrijos from '../assets/moitorrijos.png'
+import Hero from '../components/hero'
 
 export default () => (
   <MainLayout>
-    <div className="main-hero">
-      <div className="hero-text-image">
-        <div className="hero-text">
-          <h2>Diseñador y Programador</h2>
-          <h1>De Aplicaciones</h1>
-          <h2>Web, Móviles y Escritorios</h2>
-        </div>
-        <div className="hero-image">
-          <img
-            src={moitorrijos}
-            alt="Juan Moises Torrijos Programador y Diseñador"
-          />
-        </div>
-      </div>
+    <Hero />
+    <div className="main-content">
+      <h4 className="centered max-ch quien-soy">
+        Hola, mi nombre es <strong>Juan Moisés Torrijos</strong>
+        , soy <strong>diseñador y desarrollador</strong>&nbsp;
+        de Aplicaciones para la <strong>Web, Móviles y de Escritorio</strong>, 
+        en la Ciudad de Panamá 🇵🇦.
+      </h4>
     </div>
   </MainLayout>
 )

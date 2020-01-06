@@ -2,7 +2,7 @@
   background-color: darken($primary-color, 10%)
   color: $white
   height: 90vh
-  max-height: 550px
+  max-height: 650px
   display: flex
   align-items: flex-end
   background-image: url("../assets/moi-torrijos-cuidad-de-panama.jpg")
@@ -21,6 +21,7 @@
   flex-flow: row wrap
   align-items: center
   justify-content: center
+  transform: translateY($displacement)
 
 .hero-text
   text-align: center
@@ -29,20 +30,24 @@
     min-width: 0
     width: 100%
     padding: 0.25rem
+
+  h1, h2
+    margin: 0
   
+  h1
+    letter-spacing: 1.4px
+    margin: 0
+    font-weight: 600
+    text-transform: uppercase
+
+    @media screen and ( max-width: 500px )
+        font-size: 1.8rem
+
   h2
     font-weight: normal
 
     @media screen and ( max-width: 500px )
       font-size: 1.4rem
-
-  h1
-    margin: 0
-    font-weight: 600
-    letter-spacing: 1.1px
-
-    @media screen and ( max-width: 500px )
-        font-size: 1.8rem
 
 .hero-image
   align-self: flex-end
