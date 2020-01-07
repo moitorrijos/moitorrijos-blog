@@ -8,45 +8,33 @@ import portfolio from '../assets/portfolio.svg'
 import mail from '../assets/mail.svg'
 
 export default () => (
-  <ul className="navigation">
-    <li>
-      <Link to="/" activeClassName="current-page">
-        <img
-          className="logo"
-          src={logo}
-          alt="Moi Torrijos Logo all rights reserved"
-        />
-      </Link>
-    </li>
-    <li>
-      <Link to="/blog" activeClassName="current-page">
-        <img src={blog} alt="Blog icon"/>
-        Blog
-      </Link>
-    </li>
-    <li>
-      <Link to="/acerca" activeClassName="current-page">
-        <img src={acerca} alt="Acerca de mi"/>
-        Acerca de mi
-      </Link>
-    </li>
-    <li>
-      <Link to="/servicios" activeClassName="current-page">
-        <img src={love} alt="Mis Servicios"/>
-        Mis Servicios
-      </Link>
-    </li>
-    <li>
-      <Link to="/trabajos" activeClassName="current-page">
-        <img src={portfolio} alt="Mis Trabajos"/>
-        Mis Trabajos
-      </Link>
-    </li>
-    <li>
-      <Link to="/contactame" activeClassName="current-page">
-        <img src={mail} alt="Contáctame"/>
-        Contáctame
-      </Link>
-    </li>
-  </ul>
+  <div className="navigation">
+    <Link to="/" activeClassName="current-page">
+      <img
+        className="logo"
+        src={logo}
+        alt="Moi Torrijos Logo all rights reserved"
+      />
+    </Link>
+    <Link to="/blog" activeClassName="current-page">
+      <img src={blog} alt="Blog icon"/>
+      Blog
+    </Link>
+    <Link to="/acerca" activeClassName="current-page">
+      <img src={acerca} alt="Acerca de mi"/>
+      Acerca de mi
+    </Link>
+    <Link to="/servicios" activeClassName="current-page">
+      <img src={love} alt="Mis Servicios"/>
+      Mis Servicios
+    </Link>
+    <Link to="/trabajos" activeClassName="current-page">
+      <img src={portfolio} alt="Mis Trabajos"/>
+      Mis Trabajos
+    </Link>
+    <Link to="/contactame" activeClassName="current-page">
+      <img src={mail} alt="Contáctame"/>
+      Contáctame
+    </Link>
+  </div>
 )

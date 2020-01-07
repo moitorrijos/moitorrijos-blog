@@ -1,6 +1,6 @@
 $nav-border-radius: 20px
   
-ul.navigation
+.navigation
   background-color: #1B33B3
   display: flex
   flex-flow: row wrap
@@ -23,7 +23,7 @@ ul.navigation
   @media screen and ( max-width: 750px )
     font-size: 0.7rem
     
-  li
+  a
     display: flex
     justify-content: center
     align-items: center
@@ -31,6 +31,41 @@ ul.navigation
     position: relative
     border-left: 1px solid darken($primary-color, 15%)
     transition: all 0.25s ease-in-out
+    color: $white
+    display: flex
+    flex-flow: column nowrap
+    justify-content: center
+    align-items: center
+    text-align: center
+    padding: 1.2rem 3rem
+
+    @media screen and ( max-width: 1200px )
+      padding: 1rem
+
+    &.current-page
+      background-color: darken($primary-color, 7%)
+
+    img
+      opacity: 0.8
+
+    img:not(.logo)
+      margin-bottom: 0.5rem
+      height: 26px
+      width: 26px
+
+      @media screen and ( max-width: 1200px )
+        height: 25px
+        width: 25px
+
+      @media screen and ( max-width: 750px )
+        height: 20px
+        width: 20px
+        
+    img.logo
+      height: 60px
+
+      @media screen and ( max-width: 1200px )
+        height: 55px
 
     &:before
       content: ''
@@ -50,43 +85,6 @@ ul.navigation
 
     &:last-child
       border-bottom-right-radius: $nav-border-radius
-
-    a
-      color: $white
-      display: flex
-      flex-flow: column nowrap
-      justify-content: center
-      align-items: center
-      text-align: center
-      padding: 1rem 3rem
-
-      @media screen and ( max-width: 1200px )
-        padding: 1rem
-
-      &.current-page
-        font-wight: 600
-
-      img
-        opacity: 0.8
-
-      img:not(.logo)
-        margin-bottom: 0.2rem
-        height: 30px
-        width: 30px
-
-        @media screen and ( max-width: 1200px )
-          height: 25px
-          width: 25px
-
-        @media screen and ( max-width: 750px )
-          height: 20px
-          width: 20px
-          
-      img.logo
-        height: 66px
-
-        @media screen and ( max-width: 1200px )
-          height: 55px
 
     &:hover
       background-color: darken($primary-color, 5%)
