@@ -10,7 +10,7 @@ import mail from '../assets/mail.svg'
 export default () => (
   <ul className="navigation">
     <li>
-      <Link to="/">
+      <Link to="/" activeClassName="current-page">
         <img
           className="logo"
           src={logo}
@@ -19,31 +19,31 @@ export default () => (
       </Link>
     </li>
     <li>
-      <Link to="/">
+      <Link to="/blog" activeClassName="current-page">
         <img src={blog} alt="Blog icon"/>
         Blog
       </Link>
     </li>
     <li>
-      <Link to="/acerca">
+      <Link to="/acerca" activeClassName="current-page">
         <img src={acerca} alt="Acerca de mi"/>
         Acerca de mi
       </Link>
     </li>
     <li>
-      <Link to="/servicios">
+      <Link to="/servicios" activeClassName="current-page">
         <img src={love} alt="Mis Servicios"/>
         Mis Servicios
       </Link>
     </li>
     <li>
-      <Link to="/trabajos">
+      <Link to="/trabajos" activeClassName="current-page">
         <img src={portfolio} alt="Mis Trabajos"/>
         Mis Trabajos
       </Link>
     </li>
     <li>
-      <Link to="/contactame">
+      <Link to="/contactame" activeClassName="current-page">
         <img src={mail} alt="Contáctame"/>
         Contáctame
       </Link>

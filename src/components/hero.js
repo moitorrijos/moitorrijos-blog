@@ -5,9 +5,8 @@ export default () => (
   <div className="main-hero">
       <div className="hero-text-image">
         <div className="hero-text">
-          <h2>Diseñador y Programador</h2>
-          <h1>De Aplicaciones</h1>
-          <h2>Web, Móviles y Escritorios</h2>
+          <h3>Diseñador y Desarrollador</h3>
+          <h1>De Sitios Web</h1>
         </div>
         <div className="hero-image">
           <img
