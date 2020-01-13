@@ -1,5 +1,8 @@
 html
   font-size: 16px
+
+  @media screen and (max-width: 375px)
+    font-size: 14px
   
 body
   background: $light-gray
@@ -62,6 +65,10 @@ a
   border-radius: 8px
   margin-top: $displacement
 
+  @media screen and (max-width: 1200px)
+    padding: 3rem
+    border-radius: 0
+
 .header-image
   height: 10rem
   background:
@@ -74,16 +81,17 @@ a
   display: grid
   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr))
   grid-gap: 4rem
+  padding: 3rem 0
 
   .service
-    min-height: 400px
+    min-height: 25rem
     display: flex
     flex-flow: column 
-    justify-content: space-between
     align-items: center
 
     img
       height: 100px
+      margin-bottom: 1rem
 
   h4
     @extend .centered
