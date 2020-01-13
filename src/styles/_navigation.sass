@@ -26,6 +26,13 @@ $nav-border-radius: 20px
 
   @media screen and ( max-width: 750px )
     font-size: 0.6rem
+
+  @media screen and ( max-width: 505px )
+    position: fixed
+    bottom: 0
+    top: initial
+    transform: transitionY(-80px)
+    height: $mobile-menu-height
     
   a
     display: flex
@@ -72,8 +79,8 @@ $nav-border-radius: 20px
         width: 18px
 
       @media screen and ( max-width: 321px )
-        height: 12px
-        width: 12px
+        height: 14px
+        width: 14px
         
     img.logo
       height: 60px
@@ -102,3 +109,6 @@ $nav-border-radius: 20px
 
     &:hover
       background-color: darken($primary-color, 5%)
+
+    @media screen and (max-width: 1200px)
+      border-radius: 0

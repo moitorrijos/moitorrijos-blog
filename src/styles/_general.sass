@@ -8,6 +8,9 @@ body
   background: $light-gray
   font-family: 'Raleway'
   color: $dark-color
+  
+  @media screen and (max-width: 505px)
+    padding-bottom: $mobile-menu-height
 
 h1, h2, h3, h4, h5, h6
   font-weight: 600
@@ -64,10 +67,14 @@ a
   box-shadow: 0 6px 12px rgba(4, 4, 4, 0.25%)
   border-radius: 8px
   margin-top: $displacement
+  z-index: 2
 
   @media screen and (max-width: 1200px)
     padding: 3rem
     border-radius: 0
+
+  @media screen and (max-width: 505px)
+    margin-top: 0
 
 .header-image
   height: 10rem

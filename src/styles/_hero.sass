@@ -10,17 +10,15 @@
   background-position: center top
   background-size: cover
   background-repeat: no-repeat
+  z-index: 1
 
   @media screen and ( max-width: 1015px )
     max-height: none
     height: 750px
 
   @media screen and ( max-width: 507px )
-    height: 600px
+    height: auto
     align-items: center
-
-    .hero-image
-      display: none
 
 .hero-text-image
   max-width: 980px
@@ -31,7 +29,11 @@
   justify-content: center
   transform: translateY($displacement)
 
+  @media screen and ( max-width: 505px )
+    transform: translateY(0)
+
   @media screen and ( max-width: 507px)
+    height: 100%
     flex-flow: column
     justify-content: space-between
     transform: translateY(0)
@@ -39,10 +41,11 @@
 .hero-text
   text-align: center
   min-width: 500px
-  @media screen and ( max-width: 500px )
+  padding: 1rem 0
+  @media screen and ( max-width: 505px )
     min-width: 0
     width: 100%
-    padding: 0.25rem
+    margin-top: 2rem
 
   h1, h3
     margin: 0
@@ -52,16 +55,19 @@
     margin: 0
     font-weight: 600
 
-    @media screen and ( max-width: 500px )
-        font-size: 1.8rem
+    @media screen and ( max-width: 505px )
+        font-size: 2rem
 
   h3
     font-weight: normal
     letter-spacing: 1px
 
-    @media screen and ( max-width: 500px )
+    @media screen and ( max-width: 505px )
       font-size: 1.4rem
 
 .hero-image
   align-self: flex-end
   transform: translateY(4px)
+
+  img
+    transform: translateX(16px)
