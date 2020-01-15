@@ -7,7 +7,7 @@ import love from '../assets/love.svg'
 import portfolio from '../assets/portfolio.svg'
 import mail from '../assets/mail.svg'
 
-export default () => (
+const Navigation = () => (
   <div className="navigation">
     <Link to="/" activeClassName="current-page">
       <img
@@ -38,3 +38,5 @@ export default () => (
     </Link>
   </div>
 )
+
+export default Navigation

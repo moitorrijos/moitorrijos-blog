@@ -1,7 +1,7 @@
 import React from 'react'
 import moitorrijos from '../assets/moitorrijos.png'
 
-export default () => (
+const Hero = () => (
   <div className="main-hero">
       <div className="hero-text-image">
         <div className="hero-text">
@@ -17,3 +17,5 @@ export default () => (
       </div>
     </div>
 )
+
+export default Hero

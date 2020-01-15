@@ -1,0 +1,59 @@
+.services
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr))
+  grid-gap: 3rem
+
+  .service
+    display: flex
+    flex-flow: column 
+    align-items: center
+
+    img
+      height: 100px
+      margin-bottom: 1rem
+
+  h4
+    @extend .centered
+
+.home-portfolio
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr))
+  grid-gap: 3rem
+
+  .image-portfolio
+    box-shadow: $box-shadow
+    position: relative
+
+    .portfolio-image
+      max-height: 300px
+      overflow: hidden
+
+      img
+        width: 100%
+
+    span
+      width: 36px
+      height: 36px
+      border-radius: 50%
+      display: flex
+      flex-flow: row nowrap
+      justify-content: center
+      align-items: center
+      background: white
+      box-shadow: $box-shadow
+      position: absolute
+      top: 50%
+      cursor: pointer
+
+      &.prev
+        left: -18px
+        transform: rotate(180deg)
+
+      &.next
+        right: -18px
+
+      img
+        height: 18px
+
+.text-portfolio a
+  margin-top: 1rem

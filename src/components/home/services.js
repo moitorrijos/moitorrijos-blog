@@ -1,11 +1,11 @@
 import React from 'react'
 
-import sitios_profesionales from '../assets/sitios-web-profesionales.svg'
-import sitios_rapidos from '../assets/sitios-web-rapidos.svg'
-import sitios_a_la_medida from '../assets/sitios-a-la-medida.svg'
+import sitios_profesionales from '../../assets/sitios-web-profesionales.svg'
+import sitios_rapidos from '../../assets/sitios-web-rapidos.svg'
+import sitios_a_la_medida from '../../assets/sitios-a-la-medida.svg'
 
-export default () => (
-  <div className="services">
+const Services = () => (
+  <div className="services space-between">
     <div className="service">
       <img src={sitios_profesionales} alt="Sitios Web Profesionales"/>
       <h4>Sitios Web Profesionales</h4>
@@ -46,3 +46,5 @@ export default () => (
     </div>
   </div>
 )
+
+export default Services

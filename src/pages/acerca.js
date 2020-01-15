@@ -2,7 +2,7 @@ import React from 'react'
 import MainLayout from '../components/main-layout'
 import Header from '../components/header'
 
-export default () => (
+const Acerca = () => (
   <MainLayout>
     <Header />
     <div className="main-content">
@@ -14,3 +14,5 @@ export default () => (
     </div>
   </MainLayout>
 )
+
+export default Acerca

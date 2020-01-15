@@ -53,6 +53,9 @@ p
 .space-between
   margin: 3rem 0
 
+  @media screen and (max-width: 500px)
+    margin: 2rem 0
+
 .space-below
   margin-bottom: 3rem
 
@@ -84,27 +87,21 @@ a
     size: cover
     position: bottom center
 
-.services
-  display: grid
-  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr))
-  grid-gap: 4rem
-  padding: 3rem 0
+.primary-button
+  display: inline-block
+  padding: 1rem 2.5rem
+  font-weight: 500
+  letter-spacing: 1px
+  font-size: 0.9rem
+  background-color: $primary-color
+  color: white
+  border-radius: 14px
+  box-shadow: $box-shadow
+  transition: all 0.25s ease-in-out
 
-  .service
-    min-height: 25rem
-    display: flex
-    flex-flow: column 
-    align-items: center
+  &:hover
+    background-color: darken($primary-color, 10%)
 
-    img
-      height: 100px
-      margin-bottom: 1rem
-
-  h4
-    @extend .centered
-
-.copyright
-  font-size: 0.8rem
-  color: $gray
-  text-align: center
-  margin: 2rem 0
+  img
+    height: 1rem
+    margin-right: 0.75rem

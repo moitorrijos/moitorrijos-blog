@@ -1,9 +1,10 @@
 import React from "react"
 import MainLayout from '../components/main-layout'
 import Hero from '../components/hero'
-import ServicesIndex from '../components/services-index'
+import Services from '../components/home/services'
+import Portfolio from '../components/home/portfolio'
 
-export default () => (
+const Index = () => (
   <MainLayout>
     <Hero />
     <div className="main-content">
@@ -13,7 +14,10 @@ export default () => (
         de <strong>sitios y aplicaciones para la web</strong>,
         en la Ciudad de Panamá 🇵🇦.
       </h4>
-      <ServicesIndex />
+      <Services />
+      <Portfolio />
     </div>
   </MainLayout>
 )
+
+export default Index
