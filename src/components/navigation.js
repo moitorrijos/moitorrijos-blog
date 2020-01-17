@@ -16,21 +16,21 @@ const Navigation = () => (
         alt="Moi Torrijos Logo all rights reserved"
       />
     </Link>
-    <Link to="/blog" activeClassName="current-page">
-      <img src={blog} alt="Blog icon"/>
-      Blog
-    </Link>
     <Link to="/acerca" activeClassName="current-page">
       <img src={acerca} alt="Acerca de mi"/>
-      Acerca de mi
+      Quién Soy
     </Link>
     <Link to="/servicios" activeClassName="current-page">
       <img src={love} alt="Mis Servicios"/>
-      Mis Servicios
+      Servicios
     </Link>
     <Link to="/trabajos" activeClassName="current-page">
       <img src={portfolio} alt="Mis Trabajos"/>
-      Mis Trabajos
+      Trabajos
+    </Link>
+    <Link to="/blog" activeClassName="current-page">
+      <img src={blog} alt="Blog icon"/>
+      Blog
     </Link>
     <Link to="/contactame" activeClassName="current-page">
       <img src={mail} alt="Contáctame"/>
