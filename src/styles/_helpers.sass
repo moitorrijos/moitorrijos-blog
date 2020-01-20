@@ -1,0 +1,16 @@
+%three_column_grid
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr))
+  grid-gap: 3rem
+  justify-content: space-between
+
+%outer-container
+  padding: 3rem 4rem
+  max-width: 1200px
+  margin: 0 auto
+
+  @media screen and (max-width: 1200px)
+    padding: 3rem
+
+  @media screen and (max-width: 505px)
+    margin-top: 0

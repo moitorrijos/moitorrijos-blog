@@ -1,5 +1,43 @@
-.copyright
-  font-size: 0.8rem
+.footer-container
+  @extend %outer-container
   color: $footer-color
+  padding-bottom: 0
+
+.footer-columns
+  font-size: 0.85rem
+  @extend %three_column_grid
+
+  a
+    color: $footer-color
+    transition: color 0.25s ease-in-out
+
+    &:hover
+      color: darken($footer-color, 12%)
+  h3
+    margin: 1rem 0
+
+.footer-logo
+  display: flex
+  flex-flow: row wrap
+
+  svg
+    width: 120px
+    margin: 20px 20px 20px 0
+    path
+      fill: $footer-color
+
+.footer-about
+  width: 180px
+
+.social-media-moitorrijos
+  display: grid
+  grid-template-columns: repeat(auto-fill, 24px)
+  grid-gap: 20px
+
+  
+.copyright
   text-align: center
   margin: 2rem 0
+  font-size: 0.75rem
+  letter-spacing: 1px
+  opacity: 0.9

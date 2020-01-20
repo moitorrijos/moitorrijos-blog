@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import logo from '../assets/moitorrijos-logo.svg'
+import MoiTorrijosLogo from './icons/moi-logo'
 import blog from '../assets/blogging.svg'
 import acerca from '../assets/acerca-de-mi.svg'
 import love from '../assets/love.svg'
@@ -10,11 +10,7 @@ import mail from '../assets/mail.svg'
 const Navigation = () => (
   <div className="navigation">
     <Link to="/" activeClassName="current-page">
-      <img
-        className="logo"
-        src={logo}
-        alt="Moi Torrijos Logo all rights reserved"
-      />
+      <MoiTorrijosLogo />
     </Link>
     <Link to="/acerca" activeClassName="current-page">
       <img src={acerca} alt="Acerca de mi"/>
