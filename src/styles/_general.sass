@@ -14,10 +14,10 @@ body
 
 h1, h2, h3, h4, h5, h6
   font-weight: 600
-  line-height: 1.2
+  line-height: 1.1
 
 h1
-  font-size: 3rem
+  font-size: 2,8rem
   margin: 1rem 0
 
 h2
@@ -75,12 +75,22 @@ ul, ol
   border-radius: 8px
   margin-top: $displacement
   z-index: 2
+  display: flex
+  flex-flow: row wrap
 
   @media screen and (max-width: 1200px)
     border-radius: 0
 
+  .inner-main
+    max-width: 630px
+    width: 100%
+
+  .sidebar
+    max-width: 255px
+    width: 100%
+
 .header-image
-  height: 10rem
+  height: 15rem
   background:
     image: url('../assets/moitorrijos-panama-header-bg.jpg')
     repeat: no-repeat
