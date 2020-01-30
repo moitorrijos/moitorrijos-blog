@@ -6,7 +6,7 @@ const Acerca = () => (
   <MainLayout>
     <Header />
     <div className="main-content">
-      <div className="inner-main">
+      <div className="inner-main-content">
         <h1>Diseñador y Programador de Aplicaciones</h1>
         <p>
           Hola mi nombre es Juan Moisés Torrijos y soy diseñador 
