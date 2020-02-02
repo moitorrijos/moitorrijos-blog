@@ -1,20 +1,36 @@
 import React from 'react'
 import MainLayout from '../components/main-layout'
 import Header from '../components/header'
+import { graphql, useStaticQuery } from 'gatsby'
 
-const Acerca = () => (
+
+
+const Acerca = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      markdownRemark {
+        frontmatter {
+          title
+          description
+        }
+        html
+      }
+    }
+  `)
+  return (
   <MainLayout>
     <Header />
     <div className="main-content">
-      <div className="inner-main-content">
-        <h1>Diseñador y Programador de Aplicaciones</h1>
-        <p>
-          Hola mi nombre es Juan Moisés Torrijos y soy diseñador 
-          y desarrollador de aplicaciones web y móviles.
-        </p>
+      <div className="full-width-content">
+        <h1>{data.markdownRemark.frontmatter.title}</h1>
+        <h2>{data.markdownRemark.frontmatter.description}</h2>
+        <div 
+          className="max-ch" 
+          dangerouslySetInnerHTML={{__html: data.markdownRemark.html}}
+        />
       </div>
     </div>
   </MainLayout>
-)
+)}
 
 export default Acerca

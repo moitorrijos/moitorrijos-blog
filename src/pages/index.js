@@ -8,7 +8,7 @@ const Index = () => (
   <MainLayout>
     <Hero />
     <div className="main-content">
-      <h4 className="centered max-ch tall-line regular">
+      <h4 className="centered reg-ch tall-line regular">
         Hola, mi nombre es <strong>Juan Moisés Torrijos</strong>
         , soy <strong>diseñador y desarrollador</strong>&nbsp;
         de <strong>sitios y aplicaciones para la web</strong>,

@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "develop": "env-cmd -f .env gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
@@ -17,6 +17,8 @@
     "gatsby": "^2.18.12",
     "gatsby-plugin-react-helmet": "^3.1.21",
     "gatsby-plugin-sass": "^2.1.26",
+    "gatsby-source-filesystem": "^2.1.47",
+    "gatsby-transformer-remark": "^2.6.49",
     "node-sass": "^4.13.1",
     "pure-react-carousel": "^1.24.1",
     "react": "^16.12.0",
@@ -25,6 +27,7 @@
     "typeface-raleway": "0.0.75"
   },
   "devDependencies": {
+    "env-cmd": "^10.0.1",
     "prettier": "^1.19.1"
   },
   "repository": {

@@ -20,19 +20,21 @@ const Footer = () => (
         </div>
       </div>
       <div className="footer-column">
-        <h3>Del Blog</h3>
+        <h3>Vínculos Importantes</h3>
         <ul>
           <li>
-            <a href="#0">Mi Proceso de Trabajo</a>
+            <a href="https://www.meetup.com/WordPress-Meetup-Ciudad-de-Panama/">
+              Grupo de WordPress de Panamá
+            </a>
           </li>
           <li>
-            <a href="#0">Cómo Garantizar un Trabajo Profesional</a>
+            <a href="#0">WordCamp Centro América 2020</a>
           </li>
           <li>
-            <a href="#0">El Método de la Papa Caliente</a>
+            <a href="https://www.meetup.com/React-Panama/">Grupo de ReactJS Panamá</a>
           </li>
           <li>
-            <a href="#0">Cómo crear una Aplicación de Principio a Fin</a>
+            <a href="#0">React Conf Panamá 2020</a>
           </li>
         </ul>
       </div>

@@ -10,11 +10,11 @@ const Services = () => (
       <img src={sitios_profesionales} alt="Sitios Web Profesionales"/>
       <h4>Sitios Web Profesionales</h4>
       <p>
-        Si estás buscando un sitio web para promocionar tu negocio&nbsp;
-        <strong>necesitas un sitio creado profesionalmente.</strong>
-        Gracias a mi experiencia de más de 10 años, te puedo garantizar
+        Si estás buscando un sitio web para promocionar tu negocio {' '}
+        <strong>necesitas un sitio creado profesionalmente.</strong> {' '}
+        Gracias a mi experiencia de más de 10 años, te puedo garantizar {' '}
         <strong>
-          un sitio web completo, hecho a la medida y diseñado para
+          un sitio web completo, hecho a la medida y diseñado para 
           atraer visitantes y convertirlos en tus clientes.
         </strong>
       </p>
@@ -26,7 +26,7 @@ const Services = () => (
         Creo <strong>sitios web con las últimas tecnologías</strong>,
         haciéndolos muy rápidos y aptos para cualquier 
         tamaño de pantalla, desde los móviles más pequeño, 
-        hasta las pantallas de escritorio.
+        hasta las pantallas de escritorio. {' '}
         <strong>La experiencia de tus clientes siempre será la mejor.</strong>
       </p>
     </div>
@@ -37,7 +37,7 @@ const Services = () => (
         Me dedico a crear sitios web 100% a la medida,
         sin plantillas. <strong>Cada sitio web es único</strong>,
         centrado en una investigación rigurosa de tu negocio,
-        el mercado y tus clientes.&nbsp;
+        el mercado y tus clientes. {' '}
         <strong>
           Tu sitio web será la mejor
           vitrina para promocionar tus productos y servicios.
