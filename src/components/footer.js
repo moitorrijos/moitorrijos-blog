@@ -28,7 +28,7 @@ const Footer = () => (
             </a>
           </li>
           <li>
-            <a href="#0">WordCamp Centro América 2020</a>
+            <a href="https://2020.centroamerica.wordcamp.org/">WordCamp Centro América 2020</a>
           </li>
           <li>
             <a href="https://www.meetup.com/React-Panama/">Grupo de ReactJS Panamá</a>

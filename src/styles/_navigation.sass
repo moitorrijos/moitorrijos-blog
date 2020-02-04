@@ -6,7 +6,7 @@ $nav-border-radius: 20px
   grid-template-columns: repeat(6, 1fr)
   align-items: stretch
   justify-content: space-around
-  max-width: 1200px
+  max-width: $max-container-width
   width: 100%
   border-bottom-left-radius: $nav-border-radius
   border-bottom-right-radius: $nav-border-radius
@@ -15,12 +15,10 @@ $nav-border-radius: 20px
   top: 0
   left: 50%
   transform: translateX(-50%)
+  font-size: 0.9rem
 
   svg
     fill: $light-gray
-
-  @media screen and ( max-width: 1200px )
-    font-size: 0.9rem
 
   @media screen and ( max-width: 953px )
     left: 0

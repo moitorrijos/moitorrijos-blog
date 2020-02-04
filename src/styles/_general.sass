@@ -1,8 +1,5 @@
 html
-  font-size: 15px
-
-  @media screen and (max-width: 375px)
-    font-size: 14px
+  font-size: 16px
   
 body
   background: $light-gray
@@ -14,22 +11,22 @@ body
 
 h1, h2, h3, h4, h5, h6
   font-weight: 600
-  line-height: 1.1
+  line-height: 1
 
 h1
-  font-size: 2.6rem
-  margin: 1rem 0
+  font-size: 2.2rem
+  margin: 0.5rem 0
 
 h2
-  font-size: 2.3rem
-  margin: 1rem 0
+  font-size: 2rem
+  margin: 0.5rem 0
 
 h3
-  font-size: 1.8rem
-  margin: 1rem 0
+  font-size: 1.4rem
+  margin: 0.5rem 0
 
 h4
-  font-size: 1.5rem
+  font-size: 1.2rem
   line-height: 1.1
   margin: 0.4rem 0
 
@@ -53,13 +50,18 @@ ul, ol
   max-width: 60ch
 
 .max-ch
-  max-width: 80ch
+  max-width: 70ch
+
+.centered-container
+  max-width: 730px
+  width: 100%
+  margin: 0 auto
   
 .regular
   font-weight: 400
 
 .tall-line
-  line-height: 1.4
+  line-height: 1.2
 
 .space-between
   margin: 3rem 0
@@ -69,6 +71,16 @@ ul, ol
 
 .space-below
   margin-bottom: 5rem
+
+.bottom-spacing
+  margin-bottom: 3rem
+
+.content-container
+  display: grid
+  grid-template-columns: max-content minmax(auto, 70ch)
+  @media screen and (max-width: 900px)
+    grid-template-columns: initial
+  grid-gap: 60px
 
 .main-content
   @extend %outer-container
@@ -121,3 +133,31 @@ ul, ol
   img
     height: 1rem
     margin-right: 0.75rem
+
+ul.about-menu
+  position: sticky
+  top: 4rem
+  li 
+    a
+      font-size: 0.8rem
+      display: flex
+      flex-flow: row nowrap
+      align-items: center
+      padding: 0.75rem 0
+      color: $dark-color
+      transition: all 0.25s ease-in-out
+      border-radius: 2rem
+      padding: 4px
+      padding-right: 20px
+
+      &.current-menu-page
+        background: lighten($footer-color, 10%)
+        color: $white
+
+      img, svg
+        margin-right: 10px
+        width: 45px
+        height: 45px
+
+    &:hover a
+      transform: translateX(5px)
