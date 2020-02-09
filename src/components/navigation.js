@@ -9,7 +9,7 @@ import mail from '../assets/mail.svg'
 
 const Navigation = () => (
   <div className="navigation">
-    <Link to="/" activeClassName="current-page">
+    <Link to="/" activeClassName="current-page" className="logo-nav">
       <MoiTorrijosLogo />
     </Link>
     <Link to="/acerca" activeClassName="current-page">

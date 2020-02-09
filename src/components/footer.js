@@ -10,14 +10,15 @@ const Footer = () => (
   <div id="footer" className="footer-container">
     <div className="footer-columns">
       <div className="footer-column footer-logo">
-        <MoiTorrijosLogo />
         <div className="footer-about">
           <h3>Quién Soy</h3>
           <p>
             Juan Moisés Torrijos diseñador y programador
-            de aplicaciones web en la Ciudad de Panamá.
+            de aplicaciones web en la Ciudad de Panamá {' '}
+            <span role="img" aria-label="Panama Flag">🇵🇦</span>
           </p>
         </div>
+        <MoiTorrijosLogo />
       </div>
       <div className="footer-column">
         <h3>Vínculos Importantes</h3>
@@ -53,7 +54,9 @@ const Footer = () => (
       </div>
     </div>
     <p className="copyright">
-      © 2012 - { new Date().getFullYear() } Juan Moisés Torrijos todos los derechos reservados.
+      © { new Date().getFullYear() } Juan Moisés Torrijos
+      todos los derechos reservados. Ciudad de Panamá {' '}
+      <span role="img" aria-label="Panama Flag">🇵🇦</span>
     </p>
   </div>
 )

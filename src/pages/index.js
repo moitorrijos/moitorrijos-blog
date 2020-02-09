@@ -9,10 +9,11 @@ const Index = () => (
     <Hero />
     <div className="main-content">
       <h2 className="centered reg-ch tall-line regular">
-        Hola, soy <strong>Juan Moisés Torrijos</strong>
-        , <strong>diseñador y desarrollador</strong>&nbsp;
+        ¡Hola! mi nombre es <strong>Juan Moisés Torrijos</strong>
+        , soy <strong>diseñador y desarrollador</strong>&nbsp;
         de <strong>sitios y aplicaciones para la web</strong>,
-        en la Ciudad de Panamá 🇵🇦.
+        en la Ciudad de Panamá {' '}
+        <span role="img" aria-label="Panama Flag">🇵🇦</span>
       </h2>
       <Services />
       <Portfolio />

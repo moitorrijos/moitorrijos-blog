@@ -25,7 +25,6 @@ const Acerca = () => {
           <AboutMenu />
         </div>
         <div className="inner-content">
-          <h1>{data.markdownRemark.frontmatter.title}</h1>
           <h2 className="bottom-spacing">{data.markdownRemark.frontmatter.description}</h2>
           <div 
             className="inner-content"

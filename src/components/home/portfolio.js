@@ -1,16 +1,43 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link, useStaticQuery, graphql } from 'gatsby'
 import portfolio from '../../assets/portfolio.svg'
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel'
 import 'pure-react-carousel/dist/react-carousel.es.css'
-import icsclass_screen from '../../assets/icsclass-screen.jpg'
-import cotizame_screen from '../../assets/cotizame-screen.jpg'
-import intermaritime_screen from '../../assets/intermaritime-screen.jpg'
-import wordcamp_screen from '../../assets/wordcamp-screen.jpg'
+import Img from 'gatsby-image'
 import prev_icon from '../../assets/prev-icon.svg'
 import next_icon from '../../assets/next-icon.svg'
 
-const Portfolio = () => (
+const imagesName = [
+  'cotizame-screen.jpg',
+  'icsclass-screen.jpg',
+  'intermaritime-screen.jpg',
+  'wordcamp-screen.jpg'
+]
+
+const Portfolio = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allFile {
+        edges {
+          node {
+            childImageSharp {
+              fluid {
+                originalName
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+  const images = data.allFile.edges.filter(edge => (
+    edge.node.childImageSharp
+  ))
+  const sliderImages = images.filter(image => (
+    imagesName.includes(image.node.childImageSharp.fluid.originalName)
+  ))
+  return (
   <div className="home-portfolio space-between">
     <div className="image-portfolio">
       <CarouselProvider
@@ -22,18 +49,14 @@ const Portfolio = () => (
         infinite={true}
       >
         <Slider>
-          <Slide>
-            <img src={icsclass_screen} alt="ICSClass Certification Services"/>
-          </Slide>
-          <Slide>
-            <img src={cotizame_screen} alt="Cotizame"/>
-          </Slide>
-          <Slide>
-            <img src={intermaritime_screen} alt="InterMaritime"/>
-          </Slide>
-          <Slide>
-            <img src={wordcamp_screen} alt="WordCamp Panama 2019"/>
-          </Slide>
+          {sliderImages.map(sliderImage => (
+            <Slide>
+              <Img
+                fluid={sliderImage.node.childImageSharp.fluid}
+                alt={sliderImage.node.childImageSharp.fluid.originalName}
+              />
+            </Slide>
+          ))}
         </Slider>
         <ButtonBack className="slider_button prev">
           <img src={prev_icon} alt="Previous"/>
@@ -64,6 +87,6 @@ const Portfolio = () => (
       </Link>
     </div>
   </div>
-)
+)}
 
 export default Portfolio
