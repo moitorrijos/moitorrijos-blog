@@ -123,73 +123,19 @@ ul, ol
 .full-width-content
   width: 100%
 
-.header-image
-  height: 18rem
-  background:
-    image: url('../assets/moitorrijos-panama-header-bg.jpg')
-    repeat: no-repeat
-    size: cover
-    position: center top
-
-  @media screen and (max-width: 505px)
-    height: 6rem
-    background-position: right -30px
-
 .primary-button
-  display: inline-block
-  padding: 1rem 2.5rem
-  font-weight: 500
-  letter-spacing: 1px
-  font-size: 0.9rem
-  background-color: $primary-color
+  display: inline-flex
+  flex-flow: row nowrap
+  align-items: center
   color: white
-  border-radius: 14px
-  box-shadow: $box-shadow
+  background-color: darken($primary-color, 5)
   transition: all 0.25s ease-in-out
+  border-radius: 2rem
+  padding: 1rem 2rem
 
   &:hover
     background-color: darken($primary-color, 10%)
 
   img
     height: 1rem
-    margin-right: 0.75rem
-
-ul.about-menu
-  position: sticky
-  top: 4rem
-  font-size: 0.8rem
-
-  li 
-    display: inline-block
-    a
-      display: flex
-      flex-flow: row nowrap
-      align-items: center
-      padding: 0.75rem 0
-      color: $dark-color
-      transition: all 0.25s ease-in-out
-      border-radius: 2rem
-      padding: 4px
-      padding-right: 20px
-
-      &.current-menu-page
-        background: lighten($footer-color, 10%)
-        color: $white
-
-      img, svg
-        margin-right: 10px
-        width: 45px
-        height: 45px
-
-        @media screen and (max-width: 900px)
-          width: 35px  
-          height: 35px
-
-    &:hover a
-      transform: translateX(5px)
-
-  @media screen and (max-width: 900px)
-    font-size: 0.7rem
-    display: flex
-    flex-flow: row wrap
-    justify-content: space-between
+    margin-right: 1rem

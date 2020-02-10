@@ -5,6 +5,7 @@ import InstagramIcon from './icons/instagram-icon'
 import LinkedinIcon from './icons/linkedin-icon'
 import BehanceIcon from './icons/behance-icon'
 import WordpressIcon from './icons/wordpress-icon'
+import '../styles/_footer.sass'
 
 const Footer = () => (
   <div id="footer" className="footer-container">
@@ -29,13 +30,17 @@ const Footer = () => (
             </a>
           </li>
           <li>
-            <a href="https://2020.centroamerica.wordcamp.org/">WordCamp Centro América 2020</a>
+            <a href="https://www.meetup.com/React-Panama/">
+              Grupo de ReactJS Panamá
+            </a>
           </li>
           <li>
-            <a href="https://www.meetup.com/React-Panama/">Grupo de ReactJS Panamá</a>
+            <a href="https://2020.centroamerica.wordcamp.org/">
+              WordCamp Centro América 2020
+            </a>
           </li>
           <li>
-            <a href="#0">React Conf Panamá 2020</a>
+            <a href="https://reactlaconf.co/">React Conf Colombia</a>
           </li>
         </ul>
       </div>

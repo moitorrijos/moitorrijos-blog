@@ -1,0 +1,41 @@
+@import 'variables'
+  
+ul.about-menu
+  position: sticky
+  top: 4rem
+  font-size: 0.8rem
+
+  li 
+    display: inline-block
+    a
+      display: flex
+      flex-flow: row nowrap
+      align-items: center
+      padding: 0.75rem 0
+      color: $dark-color
+      transition: all 0.25s ease-in-out
+      border-radius: 2rem
+      padding: 4px
+      padding-right: 20px
+
+      &.current-menu-page
+        background: lighten($dark-color, 10%)
+        color: $white
+
+      img, svg
+        margin-right: 10px
+        width: 45px
+        height: 45px
+
+        @media screen and (max-width: 900px)
+          width: 35px  
+          height: 35px
+
+    &:hover a
+      transform: translateX(5px)
+
+  @media screen and (max-width: 900px)
+    font-size: 0.7rem
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between

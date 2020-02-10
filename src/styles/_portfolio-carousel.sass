@@ -1,0 +1,53 @@
+@import 'variables'
+  
+.home-portfolio
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr))
+  grid-gap: 3rem
+
+  .image-portfolio
+    box-shadow: $box-shadow
+    position: relative
+
+    .portfolio-image
+      max-height: 300px
+      overflow: hidden
+
+    .slider_button
+      width: 36px
+      height: 36px
+      border-radius: 50%
+      display: flex
+      flex-flow: row nowrap
+      justify-content: center
+      align-items: center
+      background: white
+      box-shadow: $box-shadow
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      cursor: pointer
+
+      &.prev
+        left: -18px
+        transform: rotate(180deg)
+
+      &.next
+        right: -18px
+
+      img
+        height: 18px
+
+.carousel
+  height: 100%
+
+.carousel__slider--horizontal
+  height: 100%
+
+.carousel__inner-slide.carousel__inner-slide.carousel__inner-slide
+  height: auto
+  img
+    width: 100%
+
+.text-portfolio a
+  margin-top: 1rem

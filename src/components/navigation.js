@@ -6,6 +6,7 @@ import acerca from '../assets/acerca-de-mi.svg'
 import love from '../assets/love.svg'
 import portfolio from '../assets/portfolio.svg'
 import mail from '../assets/mail.svg'
+import '../styles/_navigation.sass'
 
 const Navigation = () => (
   <div className="navigation">

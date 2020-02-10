@@ -4,6 +4,7 @@ import about from '../assets/about.svg'
 import curriculum from '../assets/curriculum.svg'
 import projects from '../assets/project-about.svg'
 import alianzas from '../assets/partnerships.svg'
+import '../styles/_about-menu.sass'
 
 const AboutMenu = () => (
   <ul className="about-menu">
