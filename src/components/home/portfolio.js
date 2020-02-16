@@ -8,36 +8,39 @@ import Img from 'gatsby-image'
 import prev_icon from '../../assets/prev-icon.svg'
 import next_icon from '../../assets/next-icon.svg'
 
-const imagesName = [
-  'cotizame-screen.jpg',
-  'icsclass-screen.jpg',
-  'intermaritime-screen.jpg',
-  'wordcamp-screen.jpg'
-]
-
 const Portfolio = () => {
   const data = useStaticQuery(graphql`
     query {
-      allFile {
-        edges {
-          node {
-            childImageSharp {
-              fluid {
-                originalName
-                ...GatsbyImageSharpFluid
-              }
-            }
+      cotizame: file(relativePath: {eq: "slider/cotizame-screen.jpg"}) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      icsclass: file(relativePath: {eq: "slider/icsclass-screen.jpg"}) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      intermaritime: file(relativePath: {eq: "slider/intermaritime-screen.jpg"}) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      wordcamp: file(relativePath: {eq: "slider/wordcamp-screen.jpg"}) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
           }
         }
       }
     }
   `)
-  const images = data.allFile.edges.filter(edge => (
-    edge.node.childImageSharp
-  ))
-  const sliderImages = images.filter(image => (
-    imagesName.includes(image.node.childImageSharp.fluid.originalName)
-  ))
   return (
   <div className="home-portfolio space-between">
     <div className="image-portfolio">
@@ -50,14 +53,30 @@ const Portfolio = () => {
         infinite={true}
       >
         <Slider>
-          {sliderImages.map(sliderImage => (
-            <Slide>
-              <Img
-                fluid={sliderImage.node.childImageSharp.fluid}
-                alt={sliderImage.node.childImageSharp.fluid.originalName}
-              />
-            </Slide>
-          ))}
+          <Slide>
+            <Img
+              fluid={data.cotizame.childImageSharp.fluid}
+              alt='Cotizame'
+            />
+          </Slide>
+          <Slide>
+            <Img
+              fluid={data.icsclass.childImageSharp.fluid}
+              alt='ICSClass'
+            />
+          </Slide>
+          <Slide>
+            <Img
+              fluid={data.intermaritime.childImageSharp.fluid}
+              alt='InterMaritime'
+            />
+          </Slide>
+          <Slide>
+            <Img
+              fluid={data.wordcamp.childImageSharp.fluid}
+              alt='WordCamp Panama 2019'
+            />
+          </Slide>
         </Slider>
         <ButtonBack className="slider_button prev">
           <img src={prev_icon} alt="Previous"/>
@@ -70,16 +89,16 @@ const Portfolio = () => {
     <div className="text-portfolio">
       <h3>Mis Trabajos</h3>
       <p>
-        Con más de
-        <strong>10 años de experiencia</strong>&nbsp;
+        Con más de {' '}
+        <strong>10 años de experiencia</strong>{' '}
         construyendo sitios web a la medida te puedo 
-        garantizar que tu sitio será&nbsp;
+        garantizar que tu sitio será{' '}
         <strong>
           la mejor vitrina para
           promocionar tus servicios y productos
         </strong>.
         Mis sitios web son creados para ser rápidos,
-        adaptables a cualquier dispositivo y duraderos.&nbsp;
+        adaptables a cualquier dispositivo y duraderos.{' '}
         <strong>Convertirán a tus visitantes en clientes.</strong>
       </p>
       <Link to="/trabajos" className="primary-button">

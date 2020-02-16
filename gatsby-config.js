@@ -18,7 +18,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `pages`,
-        path: `${__dirname}/src/content/pages`
+        path: `${__dirname}/src/pages`
       }
     },
     {
@@ -42,6 +42,23 @@ module.exports = {
       options: {
         plugins: [
           'gatsby-remark-relative-images',
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 685,
+              linkImagesToOriginal: false
+            }
+          }
+        ]
+      }
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        defaultLayouts: {
+          default: require.resolve('./src/components/about-layout.js')
+        },
+        gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-remark-images`,
             options: {
