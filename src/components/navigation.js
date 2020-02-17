@@ -15,7 +15,7 @@ const Navigation = () => (
     </Link>
     <Link to="/acerca" activeClassName="current-page">
       <img src={acerca} alt="Acerca de mi"/>
-      Quién Soy
+      De Mi
     </Link>
     <Link to="/servicios" activeClassName="current-page">
       <img src={love} alt="Mis Servicios"/>
@@ -31,7 +31,7 @@ const Navigation = () => (
     </Link>
     <Link to="/contactame" activeClassName="current-page">
       <img src={mail} alt="Contáctame"/>
-      Contáctame
+      Contacto
     </Link>
   </div>
 )

@@ -3,8 +3,11 @@ html
   
 body
   background: $light-gray
-  font-family: 'Raleway'
+  font-family: $body-font
   color: $dark-color
+
+.body-font
+  font-family: $body-font
   
   @media screen and (max-width: 505px)
     padding-bottom: $mobile-menu-height
@@ -12,20 +15,25 @@ body
 h1, h2, h3, h4, h5, h6
   font-weight: 600
   line-height: 1
+  font-family: $header-font
 
 h1
-  font-size: 2.2rem
-  margin: 0.5rem 0
+  font-size: 2.4rem
+  margin: 1rem 0
 
   @media screen and (max-width: 500px)
-    font-size: 1.8rem
+    font-size: 2rem
 
   @media screen and (max-width: 361px)
     font-size: 1.6rem
 
 h2
-  font-size: 1.8rem
-  margin: 0.5rem 0
+  font-size: 2.2rem
+  margin: 2rem 0
+
+  &.regular
+    font-size: 1.8rem
+    margin: 0.5rem 0
 
   @media screen and (max-width: 500px)
     font-size: 1.6rem
@@ -34,7 +42,7 @@ h2
     font-size: 1.4rem
 
 h3
-  font-size: 1.4rem
+  font-size: 1.6rem
   margin: 0.5rem 0
 
 h4
@@ -53,6 +61,18 @@ a
 ul, ol
   li
     padding: 0.5rem 0
+    list-style: outside
+    margin-left: 1rem
+
+  &.short-list
+    columns: 2
+
+    @media screen and (max-width: 360px)
+      columns: 1
+
+hr
+  color: $light-gray
+  margin: 1.5rem 0
 
 .centered
   text-align: center
@@ -69,7 +89,7 @@ ul, ol
   max-width: 730px
   width: 100%
   margin: 0 auto
-  
+
 .regular
   font-weight: 400
 
@@ -91,9 +111,13 @@ ul, ol
 .content-container
   display: grid
   grid-template-columns: max-content minmax(auto, 70ch)
+  grid-gap: 60px
+  
   @media screen and (max-width: 900px)
     grid-template-columns: initial
-  grid-gap: 60px
+
+  @media screen and (max-width: 320px)
+    grid-gap: 20px
 
 .main-content
   @extend %outer-container
@@ -143,12 +167,23 @@ ul, ol
 .image-float-left
   max-width: 300px
   width: 100%
-  border-radius: 1rem
-  box-shadow: $box-shadow
   float: left
   margin-right: 1rem
 
   @media screen and (max-width: 505px)
     float: none
-    margin: 1rem 0    
+    margin: 1rem 0
+
+.small-shadow
+  box-shadow: $box-shadow
+
+.small-border
+  border-radius: 1rem
   
+.rounded-circle
+  height: 220px
+  width: 220px
+  border-radius: 100%
+  border: 0.5rem solid $white
+  shape-outside: circle()
+  shape-margin: 0.5rem

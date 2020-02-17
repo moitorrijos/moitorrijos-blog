@@ -87,7 +87,7 @@ const Portfolio = () => {
       </CarouselProvider>
     </div>
     <div className="text-portfolio">
-      <h3>Mis Trabajos</h3>
+      <h2>Mis Trabajos</h2>
       <p>
         Con más de {' '}
         <strong>10 años de experiencia</strong>{' '}

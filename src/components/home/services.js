@@ -8,7 +8,7 @@ const Services = () => (
   <div className="services space-between">
     <div className="service">
       <img src={sitios_profesionales} alt="Sitios Web Profesionales"/>
-      <h4>Sitios Web Profesionales</h4>
+      <h3>Sitios Web Profesionales</h3>
       <p>
         Si estás buscando un sitio web para promocionar tu negocio {' '}
         <strong>necesitas un sitio creado profesionalmente.</strong> {' '}
@@ -21,7 +21,7 @@ const Services = () => (
     </div>
     <div className="service">
     <img src={sitios_rapidos} alt="Sitios Web Rápidos"/>
-      <h4>Sitios Web Rápidos</h4>
+      <h3>Sitios Web Rápidos</h3>
       <p>
         Creo <strong>sitios web con las últimas tecnologías</strong>,
         haciéndolos muy rápidos y aptos para cualquier 
@@ -32,7 +32,7 @@ const Services = () => (
     </div>
     <div className="service">
       <img src={sitios_a_la_medida} alt="Sitios Web a la Medida"/>
-      <h4>Sitios Web a la Medida</h4>
+      <h3>Sitios Web a la Medida</h3>
       <p>
         Me dedico a crear sitios web 100% a la medida,
         sin plantillas. <strong>Cada sitio web es único</strong>,

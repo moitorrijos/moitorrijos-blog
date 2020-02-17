@@ -1,13 +1,16 @@
 @import 'variables'
   
 .header-image
-  height: 18rem
+  height: 12rem
   background:
     image: $linear-gradient
     repeat: no-repeat
     size: cover
     position: center top
 
+  @media screen and (max-width: 1200px)
+    height: 9rem
+
   @media screen and (max-width: 505px)
-    height: 6rem
+    height: 3rem
     background-position: right -30px

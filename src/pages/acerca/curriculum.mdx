@@ -1,0 +1,51 @@
+import { Link, graphql } from 'gatsby'
+import Img from 'gatsby-image'
+
+export const imageQuery = graphql`
+  query {
+    file(relativePath: { eq: "juan-moises-torrijos-2019-2.jpg"}) {
+      childImageSharp {
+        fluid(maxWidth: 300) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
+
+# Juan Moisés Torrijos
+
+## Resumen
+
+<Img
+  fluid={props.data.file.childImageSharp.fluid}
+  className="image-float-left rounded-circle small-shadow"
+  alt="Juan Moisés Torrijos"
+/>
+
+**Desarrollador Web Full Stack** con *10 años de experiencia* diseñando y desarrollando **interfaces de usuario** desde emprendimientos hasta empresas corporativas. Habilidad comprobada en la **construcción de sitios web** rápidos y con excelente experiencia de usuario.
+
+Dominio en la *creación de aplicaciones web* escalables y **calidad de código** comprobado con **controles de acceso, roles y capacidades**, **creación de modelos (aplicaciones CRUD)**, manejo de **base de dato relacionadas SQL o basadas en documentos (NoSQL)**. Gran capacidad de *comunicación*, *creatividad* y *manejo de problemas* o situaciones complejas.
+
+## Expertiz
+- HTML/CSS
+- JavaScript
+- ReactJS
+- VueJS
+- NodeJS
+- Desarrollo de Temas Personalizados para WordPress
+- Sistema de Control de Versiones GIT
+- Construcción de APIs REST
+- Terminales UNIX/Linux
+- Bases de Datos Relacionadas SQL
+- Bases de Datos orientadas a documentos (NoSQL)
+- Integración Continua/Despliegue Continuo (CI/CD)
+- Pruebas Automatizadas para aplicaciones (Unit Testing & E2E Testing)
+- Aseguranza de Calidad de Código
+
+## Experiencia Profesional
+Encargado de Tecnología en [InterMaritime](https://intermaritime.org) y [Panama Maritime Training Sercices](https://panamamaritimetraining.com).
+
+Fundador de [Digiartes](https://digiartes.com) una agencia de diseño y desarrollo de aplicaciones web y móviles.
+
+<Link to="/contactame">Contáctame aquí.</Link>
