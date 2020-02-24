@@ -13,7 +13,7 @@ const Navigation = () => (
     <Link to="/" activeClassName="current-page" className="logo-nav">
       <MoiTorrijosLogo />
     </Link>
-    <Link to="/acerca" activeClassName="current-page">
+    <Link to="/acerca" activeClassName="current-page" partiallyActive={true}>
       <img src={acerca} alt="Acerca de mi"/>
       De Mi
     </Link>

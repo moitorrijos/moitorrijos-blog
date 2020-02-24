@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import about from '../assets/about.svg'
 import curriculum from '../assets/curriculum.svg'
 import projects from '../assets/project-about.svg'
-import alianzas from '../assets/partnerships.svg'
+import comunidad from '../assets/community.svg'
 import '../styles/_about-menu.sass'
 
 const AboutMenu = () => (
@@ -21,9 +21,9 @@ const AboutMenu = () => (
       </Link>
     </li>
     <li>
-      <Link to="/acerca/alianzas" activeClassName="current-menu-page">
-        <img src={alianzas} alt="Alianzas"/>
-        Alianzas
+      <Link to="/acerca/comunidades" activeClassName="current-menu-page">
+        <img src={comunidad} alt="comunidades"/>
+        Comunidades
       </Link>
     </li>
     <li>

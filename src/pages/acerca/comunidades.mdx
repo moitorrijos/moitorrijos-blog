@@ -1,0 +1,29 @@
+import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
+
+export const imageQuery = graphql`
+  query {
+    wappu: file(relativePath: { eq: "wappu-panama.png"}) {
+      childImageSharp {
+        fluid(maxWidth: 400) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
+
+# Comunidades a las que Pertenezco
+
+Tengo la gran oportunidad de formar parte de varias comunidades en la ciudad de Panamá. Las comunidades más importantes son:
+
+## Comunidad de WordPress de la Ciudad de Panamá
+
+<Img 
+  fluid={props.data.wappu.childImageSharp.fluid}
+  className="image-float-left"
+  alt='Ciudad de Panamá'
+/>
+
+La comunidad de WordPress de la Ciudad de Panamá fue fundada por [Ernesto Morales](https://www.linkedin.com/in/ernestomorales/) en el año 2018 para reunir a los usuarios del sistema y compartir conocimientos. El primer meetup se dio en las oficinas de [Global Internet](https://globalinternet.com.pa/) el 20 de Octubre de 2018 y fui la primera persona en asistir, además de los Ernesto Morales y [Neztor Aconcha](https://www.linkedin.com/in/neztorweb/) los anfitriones del encuentro. Desde ese entonces he formado parte de la comunidad como organizador de eventos tan importantes como el primer WordCamp de la Ciudad de Panamá en el año 2019 hasta organizar encuentros y dar charlas a los miembros de la comunidad. La comunidad de WordPress ha crecido desde tres miembros hasta más de 600 al día de hoy. Es una de las comunidades más importantes de la Ciudad y sigue creciendo.
+
