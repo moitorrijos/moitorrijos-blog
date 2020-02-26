@@ -164,18 +164,31 @@ hr
     height: 1rem
     margin-right: 1rem
 
-.image-float-left
+.image-float
   max-width: 300px
   width: 100%
-  float: left
-  margin-right: 1rem
-
+  
   @media screen and (max-width: 505px)
-    float: none
     margin: 1rem 0
+
+  &.left
+    margin-right: 1rem
+    float: left
+  
+  &.right
+    margin-left: 1rem
+    float: right
+
+  &.left, &.right
+    @media screen and (max-width: 505px)
+      float: none
+      
 
 .small-shadow
   box-shadow: $box-shadow
+
+.transparent-shadow
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.15))
 
 .small-border
   border-radius: 1rem

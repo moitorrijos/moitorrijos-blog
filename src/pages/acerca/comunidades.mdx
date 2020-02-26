@@ -3,13 +3,27 @@ import Img from 'gatsby-image'
 
 export const imageQuery = graphql`
   query {
-    wappu: file(relativePath: { eq: "wappu-panama.png"}) {
+    wappu: file(relativePath: {eq: "wappu-panama.png"}) {
       childImageSharp {
         fluid(maxWidth: 400) {
           ...GatsbyImageSharpFluid
         }
       }
-    }
+    },
+    panamajs: file(relativePath: {eq: "panama-js.png"}) {
+      childImageSharp {
+        fluid(maxWidth: 400) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    },
+    reactpanama: file(relativePath: {eq: "react-panama-logo.png"}) {
+      childImageSharp {
+        fluid(maxWidth: 400) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    },
   }
 `
 
@@ -21,9 +35,28 @@ Tengo la gran oportunidad de formar parte de varias comunidades en la ciudad de 
 
 <Img 
   fluid={props.data.wappu.childImageSharp.fluid}
-  className="image-float-left"
-  alt='Ciudad de Panamá'
+  className="image-float right small-border transparent-shadow"
+  alt='Wappu Montuno'
 />
 
-La comunidad de WordPress de la Ciudad de Panamá fue fundada por [Ernesto Morales](https://www.linkedin.com/in/ernestomorales/) en el año 2018 para reunir a los usuarios del sistema y compartir conocimientos. El primer meetup se dio en las oficinas de [Global Internet](https://globalinternet.com.pa/) el 20 de Octubre de 2018 y fui la primera persona en asistir, además de los Ernesto Morales y [Neztor Aconcha](https://www.linkedin.com/in/neztorweb/) los anfitriones del encuentro. Desde ese entonces he formado parte de la comunidad como organizador de eventos tan importantes como el primer WordCamp de la Ciudad de Panamá en el año 2019 hasta organizar encuentros y dar charlas a los miembros de la comunidad. La comunidad de WordPress ha crecido desde tres miembros hasta más de 600 al día de hoy. Es una de las comunidades más importantes de la Ciudad y sigue creciendo.
+La comunidad de WordPress de la Ciudad de Panamá fue fundada y es liderada por [Ernesto Morales](https://www.linkedin.com/in/ernestomorales/) en el año 2018 para reunir a los usuarios del sistema y compartir conocimientos. El primer meetup se dio en las oficinas de [Global Internet](https://globalinternet.com.pa/) el 20 de Octubre de 2018 y fui la primera persona en asistir, además de los anfitriones Ernesto Morales y [Neztor Aconcha](https://www.linkedin.com/in/neztorweb/). Desde ese entonces he formado parte de la comunidad como organizador de eventos tan importantes como el primer WordCamp de la Ciudad de Panamá en el año 2019 hasta organizar encuentros y dar charlas a los miembros de la comunidad. La comunidad de WordPress ha crecido desde tres miembros hasta más de 600 al día de hoy. Es una de las comunidades más importantes de la Ciudad y sigue creciendo.
 
+## PanamaJS
+
+<Img 
+  fluid={props.data.panamajs.childImageSharp.fluid}
+  className="image-float right small-shadow small-border"
+  alt='PanamaJS Logo'
+/>
+
+La comunidad de PanamaJS es una de las primeras comunidades de tecnología que inició en la Ciudad de Panamá. Fue fundada y es liderada por [Ytzvan Mastino](https://www.linkedin.com/in/ytzvan/) desde el año 2015. Es una de las comunidades más grandes y activas de la ciudad, y su misión es compartir, y enseñar todo lo relacionado a las tecnologías de la web y Javascript en Panamá. En esta comunidad he participado como oyente, y me encanta la presencia de muchas personas con ganas de aprender. Tiene como meta involucrar a más mujeres en la ciudad para incluirlas en el mundo de la programación. Igualmente tiene muchas alianzas con empresas y startups quienes aprovechan el talento joven y local para reclutarlas dentro de sus filas.
+
+## React Panamá
+
+<Img 
+  fluid={props.data.reactpanama.childImageSharp.fluid}
+  className="image-float right transparent-shadow small-border"
+  alt='React Panama Logo'
+/>
+
+La comunidad de React Panamá es una comunidad muy joven, fundada por mi persona y Ernesto Morales. La misión de esta comunidad es compartir conocimientos de esta tecnología que ha crecido y es de gran importancia para la creación de interfaces de usuario, al igual que conocernos y compartir ideas. Empezó en Marzo de 2020 y como una comunidad pequeña pero ha crecido con mucha aceptación. Nuestra meta es formar parte de la comunidad de React internacional empezando con la comunidad de Colombia, y promocionar a la ciudad como un centro de interés y conocimiento por la tecnología.
