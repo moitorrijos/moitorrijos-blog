@@ -1,0 +1,28 @@
+import { Link, graphql } from 'gatsby'
+import Img from 'gatsby-image'
+
+export const imageQuery = graphql`
+  query {
+    cotizame: file(relativePath: { eq: "cotizame-screen-medium.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }    
+  }
+`
+
+# Mis Proyectos Personales
+
+A continuación hablaré de algunos proyectos personales en los cuales estoy trabajando o he trabajado. Estos proyectos han sido inspiración propia basado en las necesidades de algunos clientes y colaboradores. Todos son de mi propia creación y están protegidos bajo mi propiedad intelectual. Si te gustaría conocer más de ellos o formar parte de uno de ellos o inclusive invertir tus recursos no dudes en <Link to="/contactame">contactarme aquí</Link>.
+
+## Cotiza.me
+
+<Img 
+  fluid={props.data.cotizame.childImageSharp.fluid}
+  className="small-shadow"
+  alt='Cotizame'
+/>
+
+Es un proyecto para ayudar a los independientes y pequeños negocios a crear y enviar cotizaciones y facturas, al igual que recibir pagos por internet con facilidad. También permite llevar un control de los servicios, y productos que vende al igual que inventarios cortos. Adicionalmente permite tener un sitio para gestionar los contactos y relaciones con los clientes. Finalmente permite administrar proyectos y tareas. Es una aplicación que aún está en desarrollo y espero finalizar en el 2020. Puedes conocer más de ella en <a href="https://cotiza.me">Cotiza.me</a>. 
