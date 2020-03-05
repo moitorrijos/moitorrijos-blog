@@ -1,0 +1,33 @@
+@import 'variables'
+
+.inner-form
+  padding: 2rem 0
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(288px, 1fr))
+  grid-gap: 40px
+  
+  label
+    display: block
+    line-height: 1.1
+  
+  input, select, textarea
+    font-size: inherit
+    color: inherit
+    border: none
+    appearance: none
+    padding: 12px 15px
+    border-bottom: 4px solid $primary-color
+    width: 100%
+    box-shadow: 0 3px 4px rgba(0,0,0,0.15)
+
+    &::placeholder
+      color: lighten($gray, 10%)
+
+  textarea
+    min-height: 225px
+
+  select
+    background:
+      image: url('../assets/select-arrow.svg')
+      repeat: no-repeat
+      position: center right 1rem

@@ -147,7 +147,20 @@ hr
 .full-width-content
   width: 100%
 
+.small-centered
+  max-width: 500px
+  margin: 0 auto
+  line-height: 1.1
+  font-size: 1.2rem
+
+.medium-centered
+  max-width: 800px
+  margin: 0 auto
+
 .primary-button
+  font-size: inherit
+  border: none
+  appearance: none
   display: inline-flex
   flex-flow: row nowrap
   align-items: center
@@ -160,7 +173,7 @@ hr
   &:hover
     background-color: darken($primary-color, 10%)
 
-  img
+  img, svg
     height: 1rem
     margin-right: 1rem
 
@@ -200,3 +213,7 @@ hr
   border: 0.5rem solid $white
   shape-outside: circle()
   shape-margin: 0.5rem
+
+@media screen and (min-width: 710px)
+  .span2
+    grid-column: span 2

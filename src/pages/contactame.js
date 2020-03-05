@@ -2,6 +2,7 @@ import React from 'react'
 import MainLayout from '../components/main-layout'
 import Header from '../components/header'
 import WhatsappIcon from '../components/icons/whatsapp-icon'
+import ContactForm from '../components/contact-form'
 import '../styles/_contactame.sass'
 
 const ContactPage = () => {
@@ -14,17 +15,25 @@ const ContactPage = () => {
     <div className="main-content">
       <div className="full-width-content">
         <h1 className="centered">Contáctame</h1>
-        <div className="centered-text">
+        <div className="small-centered">   
           <p>
             ¿Necesitas una tarea urgente?
             <br/>
-            <button className="whatsapp" onClick={showHoneypot}>
+            <a
+              className="whatsapp"
+              href="https://wa.me/50766794458?text=Hola%20Moi%2C%20necesito%20un%20sitio%20web!"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Haz click aquí para conversar conmigo por WhatsApp{' '}
               <WhatsappIcon />
-            </button>
+            </a>
             <br/>
-            O llena el formulario abajo y te contactaré muy pronto.
+            o llena el formulario abajo y te contactaré muy pronto.
           </p>
+        </div>
+        <div className="medium-centered">
+          <ContactForm />
         </div>
       </div>
     </div>
