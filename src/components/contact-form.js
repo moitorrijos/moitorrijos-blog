@@ -37,7 +37,8 @@ const ContactForm = () => {
           </select>
         </label>
         <label htmlFor="tuNombre">
-          Cuál es tu nombre<br />
+          Cuál es tu nombre{' '}
+          <span className="small">(necesario)</span>
           <input 
             type="text"
             name="tuNombre"
@@ -48,7 +49,8 @@ const ContactForm = () => {
           />
         </label>
         <label htmlFor="tuCorreo">
-          Cuál es tu correo<br />
+          Cuál es tu correo{' '}
+          <span className="small">(necesario)</span>
           <input 
             type="email"
             name="tuCorreo"
@@ -59,7 +61,8 @@ const ContactForm = () => {
           />
         </label>
         <label htmlFor="telephone">
-          Cuál es tu teléfono (opcional)
+          Cuál es tu teléfono{' '}
+          <span className="small">(opcional)</span>
           <input
             type="tel"
             name="telephone"

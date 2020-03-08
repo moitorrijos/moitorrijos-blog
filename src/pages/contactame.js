@@ -5,11 +5,7 @@ import WhatsappIcon from '../components/icons/whatsapp-icon'
 import ContactForm from '../components/contact-form'
 import '../styles/_contactame.sass'
 
-const ContactPage = () => {
-  function showHoneypot() {
-    console.log('Honeypot goes here...')
-  }
-  return (
+const ContactPage = () => (
   <MainLayout>
     <Header />
     <div className="main-content">
@@ -38,7 +34,6 @@ const ContactPage = () => {
       </div>
     </div>
   </MainLayout>
-  )
-}
+)
 
 export default ContactPage

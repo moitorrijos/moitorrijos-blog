@@ -2,7 +2,7 @@ import React from 'react'
 import MainLayout from '../components/main-layout'
 import Header from '../components/header'
 import AboutMenu from '../components/AboutMenu'
-import { MDXProvider } from "@mdx-js/react"
+import { MDXProvider } from '@mdx-js/react'
 
 const Acerca = ({children}) => {
   return (
