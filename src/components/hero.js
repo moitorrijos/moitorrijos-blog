@@ -1,7 +1,7 @@
-import React from 'react'
-import Img from 'gatsby-image'
-import { graphql, useStaticQuery } from 'gatsby'
-import '../styles/_hero.sass'
+import React from "react"
+import Img from "gatsby-image"
+import { graphql, useStaticQuery } from "gatsby"
+import "../styles/_hero.sass"
 
 const Hero = () => {
   const data = useStaticQuery(graphql`
@@ -16,7 +16,7 @@ const Hero = () => {
     }
   `)
   return (
-  <div className="main-hero">
+    <div className="main-hero">
       <div className="hero-text-image">
         <div className="hero-text">
           <h2>Diseñador y Desarrollador de</h2>
@@ -29,6 +29,7 @@ const Hero = () => {
         />
       </div>
     </div>
-)}
+  )
+}
 
 export default Hero

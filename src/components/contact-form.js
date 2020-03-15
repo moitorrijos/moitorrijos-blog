@@ -1,29 +1,27 @@
-import React from 'react'
-import { useFormik } from 'formik'
-import '../styles/_contact-form.sass'
-import SendIcon from '../components/icons/send-icon'
+import React from "react"
+import { useFormik } from "formik"
+import "../styles/_contact-form.sass"
+import SendIcon from "../components/icons/send-icon"
 //TODO: Validation
 const ContactForm = () => {
   const formik = useFormik({
     initialValues: {
-      tema: 'Quiero decir hola',
-      tuNombre: '',
-      tuCorreo: '',
-      telephone: '',
-      message: '',
+      tema: "Quiero decir hola",
+      tuNombre: "",
+      tuCorreo: "",
+      telephone: "",
+      message: "",
     },
     onSubmit: values => {
       console.log(JSON.stringify(values))
-    }
+    },
   })
   return (
-    <form
-      className="contactform"
-      onSubmit={formik.handleSubmit}
-    >
+    <form className="contactform" onSubmit={formik.handleSubmit}>
       <div className="inner-form">
         <label htmlFor="tema">
-          Escoge un tema<br />
+          Escoge un tema
+          <br />
           <select
             name="tema"
             value={formik.values.tema}
@@ -33,13 +31,14 @@ const ContactForm = () => {
             <option value="Quiero decir hola">Quiero decir hola</option>
             <option value="Necesito un sitio web">Necesito un sitio web</option>
             <option value="Necesito una app">Necesito una app</option>
-            <option value="Quiero hablar de Negocios">Quiero hablar de Negocios</option>
+            <option value="Quiero hablar de Negocios">
+              Quiero hablar de Negocios
+            </option>
           </select>
         </label>
         <label htmlFor="tuNombre">
-          Cuál es tu nombre{' '}
-          <span className="small">(necesario)</span>
-          <input 
+          Cuál es tu nombre <span className="small">(necesario)</span>
+          <input
             type="text"
             name="tuNombre"
             placeholder="Maria Antonieta de las Nieves"
@@ -49,9 +48,8 @@ const ContactForm = () => {
           />
         </label>
         <label htmlFor="tuCorreo">
-          Cuál es tu correo{' '}
-          <span className="small">(necesario)</span>
-          <input 
+          Cuál es tu correo <span className="small">(necesario)</span>
+          <input
             type="email"
             name="tuCorreo"
             placeholder="maria.antonieta@delasnieves.com"
@@ -61,8 +59,7 @@ const ContactForm = () => {
           />
         </label>
         <label htmlFor="telephone">
-          Cuál es tu teléfono{' '}
-          <span className="small">(opcional)</span>
+          Cuál es tu teléfono <span className="small">(opcional)</span>
           <input
             type="tel"
             name="telephone"
@@ -79,9 +76,8 @@ const ContactForm = () => {
             placeholder="Hola Moi necesito un sitio web 😁..."
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-          >
-            {formik.values.message}
-          </textarea>
+            value={formik.values.message}
+          />
         </label>
       </div>
       <button className="primary-button" type="submit">

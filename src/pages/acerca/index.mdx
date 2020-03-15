@@ -5,7 +5,7 @@ export const imageQuery = graphql`
   query {
     ciudad_panama: file(relativePath: { eq: "ciudad-panama-pacifico.jpg"}) {
       childImageSharp {
-        fluid(maxWidth: 300) {
+        fluid(maxWidth: 700) {
           ...GatsbyImageSharpFluid
         }
       }
@@ -17,7 +17,7 @@ export const imageQuery = graphql`
 
 <Img 
   fluid={props.data.ciudad_panama.childImageSharp.fluid}
-  className="image-float-left small-shadow small-border"
+  className="right small-shadow small-border"
   alt='Ciudad de Panamá'
 />
 

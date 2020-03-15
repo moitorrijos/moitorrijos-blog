@@ -1,0 +1,66 @@
+import PageLayout from '../components/pages-layout.js'
+import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
+
+export default ({children}) => (
+  <PageLayout>
+    <h1 className="centered">Mis Servicios</h1>
+    {children}
+  </PageLayout>
+)
+
+<Img
+  fluid={props.data.webDesign.childImageSharp.fluid}
+  className="medium-image float-right medium-padding"
+  alt="Diseño Web Profesional"
+/>
+
+## Sitios Web Profesionales
+
+El sitio web de tu empresa, o de tu blog personal, habla mucho de tu marca. Es importante que tu sitio web represente tu producto o servicio de la mejor manera. No sólo debe tener mucha estética, si no que también debe cargar muy rápido, sin importar desde qué dispositivo lo vean tus visitantes. Además tu sitio debe aparecer en la primera página de los buscadores como Google. Mi promesa es que tu sitio web sea un sitio web creado profesionalmente, ya que como diseñador y programador te puedo garantizar que tu sitio no sólo sea muy estético, si no que cargue rápido, y sea visible en cualquier dispositivo y aparezca en la primera página de los buscadores.
+
+<Img
+  fluid={props.data.fastWeb.childImageSharp.fluid}
+  className="medium-image float-left medium-padding"
+  alt="Sitios Web Rápidos"
+/>
+
+## Sitios Web Que Cargan rápido
+
+Una de las características más importantes de un sitio web creado profesionalmente es que es muy rápido al cargar. Utilizando las últimas y más avanzadas tecnologías te puedo garantizar que tu sitio web será mucho más rápido que el de tus competidores. Esto no sólo es beneficioso porque nos gusta la velocidad, si no porque un sitio que carga muy rápido también gana mucho campo con los motores de búsqueda cómo Google, estarás en las primeras páginas de los buscadores sin duda. Además de crear sitios web rápidos están hospedados en una red distribuidas de servidores que sirven el contenido de tu sitio a los usuarios en el menor tiempo posible, ya que siempre están muy cerca de ellos. Tus clientes les encantará tu sitio web o aplicación.
+
+<Img
+  fluid={props.data.responsive.childImageSharp.fluid}
+  className="medium-image float-right medium-padding"
+  alt="Responsive Web Design"
+/>
+
+## Sitios Web que se Adaptan a Cualquier dispositivo
+
+En nuestros tiempos es muy importante tener un sitio web que se vea bien y cargue rápido en dispositivos móviles. Tus clientes visitarán tu sitio web a través de sus celulares. Es por esto que me dedico a que tu sitio sea muy estético para los celulares desde un principio y luego adaptarlo a pantallas más grandes como las de las computadoras de escritorio. Este tipo de desarrollo se llama "móviles primero" y es uno de los más importantes estándares que sigo como diseñador y programador. Tu sitio web será de alta calidad y cargará muy rápido hasta para personas que tienen conectividad baja (como 3G). Tu sitio web se comportará como una aplicación móvil.
+
+export const imageQuery = graphql`
+  query {
+    webDesign: file(relativePath: {eq: "web-design.png"}) {
+      childImageSharp {
+        fluid(maxWidth: 500) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    },
+    fastWeb: file(relativePath: {eq: "fast-web.png"}) {
+      childImageSharp {
+        fluid(maxWidth: 500) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    responsive: file(relativePath: {eq: "responsive-web.png"}) {
+      childImageSharp {
+        fluid(maxWidth: 500) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  },
+`

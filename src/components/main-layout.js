@@ -1,19 +1,19 @@
-import React from 'react'
-import Navigation from './navigation'
-import Footer from './footer'
-import 'typeface-raleway'
-import '../styles/main.sass'
-import { Helmet } from 'react-helmet'
-import { graphql, useStaticQuery } from 'gatsby'
-import favicon from '../../static/favicon.ico'
+import React from "react"
+import Navigation from "./navigation"
+import Footer from "./footer"
+import "typeface-raleway"
+import "../styles/main.sass"
+import { Helmet } from "react-helmet"
+import { graphql, useStaticQuery } from "gatsby"
+import favicon from "../../static/favicon.ico"
 
 const MainLayout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query {
       site {
         siteMetadata {
-          title,
-          siteurl,
+          title
+          siteurl
           description
         }
       }
@@ -30,7 +30,7 @@ const MainLayout = ({ children }) => {
       </Helmet>
       <div className="main-container">
         <Navigation />
-          {children}
+        {children}
         <Footer />
       </div>
     </>

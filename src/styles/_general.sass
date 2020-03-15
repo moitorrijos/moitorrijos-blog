@@ -177,25 +177,46 @@ hr
     height: 1rem
     margin-right: 1rem
 
-.image-float
-  max-width: 300px
-  width: 100%
-  
+.small-button
+  @extend .primary-button
+  transform: scale(0.9)
+  margin: 
+    top: 1rem
+    bottom: 3rem
+
+.small-image, .medium-image
+  width: 100% 
+
   @media screen and (max-width: 505px)
     margin: 1rem 0
 
-  &.left
-    margin-right: 1rem
-    float: left
+.small-image
+  max-width: 300px
   
-  &.right
-    margin-left: 1rem
-    float: right
+.medium-image
+  max-width: 500px
 
-  &.left, &.right
-    @media screen and (max-width: 505px)
-      float: none
-      
+.float-left
+  margin-right: 1rem
+  float: left
+  clear: left
+
+.float-right
+  margin-left: 1rem
+  float: right
+  clear: right
+
+.float-left, .float-right
+  @media screen and (max-width: 505px)
+    float: none
+
+.image-gap
+  margin: 
+    top: 0
+    bottom: 1rem
+
+.medium-padding
+  padding: 1rem 2rem
 
 .small-shadow
   box-shadow: $box-shadow

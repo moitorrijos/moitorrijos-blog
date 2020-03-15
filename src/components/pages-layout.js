@@ -1,16 +1,17 @@
 import React from "react"
-import MainLayout from "../components/main-layout"
 import Header from "../components/header"
+import MainLayout from "../components/main-layout"
+import { MDXProvider } from "@mdx-js/react"
 
-const BlogPage = () => (
+const PageLayout = ({ children }) => (
   <MainLayout>
     <Header />
     <div className="main-content">
       <div className="full-width-content">
-        <h1 className="centered">Mi Blog</h1>
+        <MDXProvider>{children}</MDXProvider>
       </div>
     </div>
   </MainLayout>
 )
 
-export default BlogPage
+export default PageLayout

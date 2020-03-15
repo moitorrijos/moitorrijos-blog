@@ -2,9 +2,10 @@
 title: Juan Moisés Torrijos
 description: Diseñador y Programador de Aplicaciones Web
 ---
-Mi nombre es *Juan Moisés Torrijos* y soy **diseñador y programador** de **sitios y aplicaciones** para la web.
 
-Vivo en la *ciudad de Panamá* 🇵🇦 trabajando en una empresa [marítima internacional](https://intermaritime.org/) como encargado de tecnología. Soy el fundador de una [empresa de diseño y desarrollo de sitios y aplicaciones web y móviles](https://digiartes.com). En mi tiempo libre escribo en mi blog, ayudo a empresas locales e internacionales a crear su presencia en la web, creo aplicaciones web y comparto mis conocimientos con mis colegas en diferentes grupos locales de tecnología.
+Mi nombre es _Juan Moisés Torrijos_ y soy **diseñador y programador** de **sitios y aplicaciones** para la web.
+
+Vivo en la _ciudad de Panamá_ 🇵🇦 trabajando en una empresa [marítima internacional](https://intermaritime.org/) como encargado de tecnología. Soy el fundador de una [empresa de diseño y desarrollo de sitios y aplicaciones web y móviles](https://digiartes.com). En mi tiempo libre escribo en mi blog, ayudo a empresas locales e internacionales a crear su presencia en la web, creo aplicaciones web y comparto mis conocimientos con mis colegas en diferentes grupos locales de tecnología.
 
 Empecé mi carrera en el 2009, creando sitios web personalizados para todo tipo de clientes. Desde clínicas especializadas, escuelas de artes marciales, tiendas locales y empresas de construcción. Hoy en día me dedico a compartir mis conocimientos, escribir sobre tecnología y seguir creando sitios web.
 
