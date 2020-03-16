@@ -13,7 +13,7 @@ const BlogPage = () => {
             name,
             id,
             childMdx {
-              excerpt(pruneLength: 380)
+              excerpt(pruneLength: 420)
               frontmatter {
                 title,
                 date
