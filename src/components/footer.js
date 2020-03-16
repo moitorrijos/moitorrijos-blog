@@ -5,6 +5,7 @@ import InstagramIcon from "./icons/instagram-icon"
 import LinkedinIcon from "./icons/linkedin-icon"
 import BehanceIcon from "./icons/behance-icon"
 import WordpressIcon from "./icons/wordpress-icon"
+import CodepenIcon from "./icons/codepen-icon"
 import "../styles/_footer.sass"
 
 const Footer = () => (
@@ -55,6 +56,7 @@ const Footer = () => (
           <LinkedinIcon />
           <WordpressIcon />
           <BehanceIcon />
+          <CodepenIcon />
         </div>
       </div>
     </div>

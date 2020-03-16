@@ -17,7 +17,7 @@ export default ({children}) => (
 
 ## Sitios Web Profesionales
 
-El sitio web de tu empresa, o de tu blog personal, habla mucho de tu marca. Es importante que tu sitio web represente tu producto o servicio de la mejor manera. No sólo debe tener mucha estética, si no que también debe cargar muy rápido, sin importar desde qué dispositivo lo vean tus visitantes. Además tu sitio debe aparecer en la primera página de los buscadores como Google. Mi promesa es que tu sitio web sea un sitio web creado profesionalmente, ya que como diseñador y programador te puedo garantizar que tu sitio no sólo sea muy estético, si no que cargue rápido, y sea visible en cualquier dispositivo y aparezca en la primera página de los buscadores.
+El sitio web de tu empresa, o tu blog personal, habla mucho de tu marca. Es importante que **tu sitio web represente tu producto o servicio** de la mejor manera. No sólo debe tener mucha estética, si no que también debe estar siempre disponible, sin importar desde qué dispositivo lo visiten. Además tu sitio debe **aparecer en las primeras página de los buscadores como Google**. Mi promesa es que tu sitio web sea un sitio web creado profesionalmente, **creado utilizando las mejores prácticas de la industria**. Un sitio web creado profesionalmente, siguiendo las mejores prácticas, **atrae y mantiene más visitantes**.
 
 <Img
   fluid={props.data.fastWeb.childImageSharp.fluid}
@@ -27,7 +27,7 @@ El sitio web de tu empresa, o de tu blog personal, habla mucho de tu marca. Es i
 
 ## Sitios Web Que Cargan rápido
 
-Una de las características más importantes de un sitio web creado profesionalmente es que es muy rápido al cargar. Utilizando las últimas y más avanzadas tecnologías te puedo garantizar que tu sitio web será mucho más rápido que el de tus competidores. Esto no sólo es beneficioso porque nos gusta la velocidad, si no porque un sitio que carga muy rápido también gana mucho campo con los motores de búsqueda cómo Google, estarás en las primeras páginas de los buscadores sin duda. Además de crear sitios web rápidos están hospedados en una red distribuidas de servidores que sirven el contenido de tu sitio a los usuarios en el menor tiempo posible, ya que siempre están muy cerca de ellos. Tus clientes les encantará tu sitio web o aplicación.
+Una de las características más importantes de un sitio web creado profesionalmente es que es muy rápido al cargar. Utilizando las últimas y más avanzadas tecnologías te puedo garantizar que **tu sitio web será mucho más rápido que el de tus competidores**. Esto no sólo es beneficioso porque nos gusta la velocidad, si no porque **un sitio que carga muy rápido le gusta mucho a los motores de búsqueda como Google**, __estarás en las primeras páginas de los buscadores__ sin duda. Además de crear sitios web rápidos están **hospedados en una red distribuidas de servidores que sirven el contenido de tu sitio a los usuarios en el menor tiempo posible**, ya que siempre están muy cerca de ellos. Tus clientes les encantará tu sitio web o aplicación.
 
 <Img
   fluid={props.data.responsive.childImageSharp.fluid}
@@ -37,7 +37,17 @@ Una de las características más importantes de un sitio web creado profesionalm
 
 ## Sitios Web que se Adaptan a Cualquier dispositivo
 
-En nuestros tiempos es muy importante tener un sitio web que se vea bien y cargue rápido en dispositivos móviles. Tus clientes visitarán tu sitio web a través de sus celulares. Es por esto que me dedico a que tu sitio sea muy estético para los celulares desde un principio y luego adaptarlo a pantallas más grandes como las de las computadoras de escritorio. Este tipo de desarrollo se llama "móviles primero" y es uno de los más importantes estándares que sigo como diseñador y programador. Tu sitio web será de alta calidad y cargará muy rápido hasta para personas que tienen conectividad baja (como 3G). Tu sitio web se comportará como una aplicación móvil.
+En nuestros tiempos es muy importante tener un sitio web que se vea bien y cargue rápido en dispositivos móviles. **Tus clientes visitarán tu sitio web desde sus celulares**. Es por esto que me dedico a que **tu sitio sea muy estético y rápido para los celulares** desde el inicio y luego adaptarlo a pantallas grandes como las de las computadoras de escritorio. Este tipo de desarrollo se llama _"móviles primero"_ y es uno de los más importantes estándares que sigo como diseñador y programador. **Tu sitio web será de alta calidad y cargará muy rápido para personas que tienen conectividad baja (como 3G)**. Tu sitio web se comportará como una aplicación móvil.
+
+<Img 
+  fluid={props.data.siteDesign.childImageSharp.fluid}
+  className="medium-image float-left medium-padding"
+  alt='Diseño Web a la Medida'
+/>
+
+## Sitios Web A la Medida de Tus Productos y Servicios
+
+Los sitios web creados a la medida son creados utilizando tu marca como base. **Tu contenido no se debe adaptar a una plantilla**, el diseño de tu marca debe ser el punto de partida para el diseño de tu sitio web. **Un sitio web adaptado a tus productos y servicios convierte más visitantes en clientes**. Tu sitio web no sólo será único dentro del inmenso mar de sitios web creados con plantillas, si no que tendrá más coherencia con tu marca, lo que hará que **tu sitio sea un lugar extraordinario para tus visitantes.**
 
 export const imageQuery = graphql`
   query {
@@ -61,6 +71,13 @@ export const imageQuery = graphql`
           ...GatsbyImageSharpFluid
         }
       }
-    }
+    },
+    siteDesign: file(relativePath: {eq: "site-design.png"}) {
+      childImageSharp {
+        fluid(maxWidth: 500) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    },
   },
 `
