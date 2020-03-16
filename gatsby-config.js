@@ -47,6 +47,13 @@ module.exports = {
         path: `${__dirname}/src/assets/slider`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: "posts",
+        path: `${__dirname}/src/content/posts`,
+      },
+    },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     {
@@ -69,6 +76,7 @@ module.exports = {
       options: {
         defaultLayouts: {
           default: require.resolve("./src/components/about-layout.js"),
+          posts: require.resolve("./src/components/posts-layout.js")
         },
         gatsbyRemarkPlugins: [
           {

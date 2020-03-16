@@ -7,10 +7,10 @@ const CodepenIcon = () => (
     rel="noopener noreferrer"
   >
   <svg version="1.1" id="Social_Icons" x="0px"
-	 y="0px" viewBox="0 0 128 128" enable-background="new 0 0 128 128">
+	 y="0px" viewBox="0 0 128 128">
     <g id="_x36__stroke">
       <g id="Codepen">
-        <path id="Codepen_1_" fill-rule="evenodd" clip-rule="evenodd" fill="#5C72A5" d="M117,73.2L103.2,64l13.8-9.2V73.2z M69.5,112.2
+        <path id="Codepen_1_" fill="#5C72A5" d="M117,73.2L103.2,64l13.8-9.2V73.2z M69.5,112.2
           V86.6l23.8-15.9l19.2,12.9L69.5,112.2z M64,77L44.5,64L64,51l19.5,13L64,77z M58.5,112.2L15.4,83.5l19.3-12.9l23.8,15.9V112.2z
           M11,54.8L24.8,64L11,73.2V54.8z M58.5,15.8v25.7l-23.8,16L15.4,44.5L58.5,15.8z M69.5,15.8l43.1,28.7L93.3,57.4l-23.8-16V15.8z
           M128,43.8c0-0.1,0-0.2,0-0.2c0-0.2-0.1-0.3-0.1-0.5c0-0.1-0.1-0.2-0.1-0.3c0-0.1-0.1-0.3-0.1-0.4c0-0.1-0.1-0.2-0.1-0.3
