@@ -17,25 +17,11 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Raleway`,
-            variants: [`400`, `600`],
-          },
-          {
-            family: `Bebas Neue`,
-          },
-        ],
-      },
-    },
-    {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
           `Bebas+Neue`,
-          `Bebas+Neue|Raleway\:400,400i,500i,700` // you can also specify font weights and styles
+          `Raleway\:400,400i,500i,700` // you can also specify font weights and styles
         ],
         display: 'swap'
       }
