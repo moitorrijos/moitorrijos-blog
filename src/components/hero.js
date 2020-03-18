@@ -9,7 +9,7 @@ const Hero = () => {
       file(relativePath: { eq: "moitorrijos.png" }) {
         childImageSharp {
           fluid(maxWidth: 454, maxHeight: 465) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }
       }

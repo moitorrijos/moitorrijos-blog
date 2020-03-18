@@ -41,21 +41,21 @@ export const imageQuery = graphql`
     wappu: file(relativePath: {eq: "wappu-panama.png"}) {
       childImageSharp {
         fluid(maxWidth: 400) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     },
     panamajs: file(relativePath: {eq: "panama-js.png"}) {
       childImageSharp {
         fluid(maxWidth: 400) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     },
     reactpanama: file(relativePath: {eq: "react-panama-logo.png"}) {
       childImageSharp {
         fluid(maxWidth: 400) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     },

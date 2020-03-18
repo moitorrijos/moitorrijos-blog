@@ -6,7 +6,7 @@ export const imageQuery = graphql`
     file(relativePath: { eq: "juan-moises-torrijos-2019-2.jpg"}) {
       childImageSharp {
         fluid(maxWidth: 300) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     }

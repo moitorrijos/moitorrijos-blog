@@ -20,14 +20,14 @@ const Portfolio = () => {
       cotizame: file(relativePath: { eq: "slider/cotizame-screen.jpg" }) {
         childImageSharp {
           fluid {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }
       }
       icsclass: file(relativePath: { eq: "slider/icsclass-screen.jpg" }) {
         childImageSharp {
           fluid {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }
       }
@@ -36,14 +36,14 @@ const Portfolio = () => {
       ) {
         childImageSharp {
           fluid {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }
       }
       wordcamp: file(relativePath: { eq: "slider/wordcamp-screen.jpg" }) {
         childImageSharp {
           fluid {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }
       }
