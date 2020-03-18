@@ -22,6 +22,7 @@ const MainLayout = ({ children }) => {
   return (
     <>
       <Helmet>
+        <html lang="es-PA" />
         <meta charSet="utf-8" />
         <title>{data.site.siteMetadata.title}</title>
         <link rel="canonical" href={data.site.siteMetadata.siteurl} />
