@@ -17,6 +17,7 @@ const WordpressIcon = () => (
         fill="#5c72a5"
       />
     </svg>
+    WordPress
   </a>
 )
 

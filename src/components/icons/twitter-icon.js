@@ -18,6 +18,7 @@ const TwitterIcon = () => (
         fill="#5c72a5"
       />
     </svg>
+    Twitter
   </a>
 )
 

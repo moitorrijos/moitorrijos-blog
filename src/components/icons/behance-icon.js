@@ -18,6 +18,7 @@ const BehanceIcon = () => (
         fill="#5c72a5"
       />
     </svg>
+    Behance
   </a>
 )
 

@@ -29,6 +29,7 @@ const CodepenIcon = () => (
         </g>
       </g>
     </svg>
+    Codepen
   </a>
 )
 

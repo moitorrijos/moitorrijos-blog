@@ -17,6 +17,7 @@ const LinkedinIcon = () => (
         fill="#5c72a5"
       />
     </svg>
+    LinkedIn
   </a>
 )
 

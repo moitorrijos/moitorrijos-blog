@@ -27,6 +27,7 @@ const InstagramIcon = () => (
         fill="#5c72a5"
       />
     </svg>
+    Instagram
   </a>
 )
 

@@ -3,7 +3,7 @@
   
 .footer-container
   @extend %outer-container
-  color: $footer-color
+  color: $primary-color
   padding-bottom: 0
 
 .footer-columns
@@ -11,11 +11,11 @@
   @extend %three_column_grid
 
   a
-    color: $footer-color
+    color: $primary-color
     transition: color 0.25s ease-in-out
 
     &:hover
-      color: darken($footer-color, 12%)
+      color: darken($primary-color, 12%)
   h3
     margin: 1rem 0
 
@@ -27,7 +27,7 @@
     width: 50px
     margin: 20px 0 20px 30px
     path
-      fill: $footer-color
+      fill: $primary-color
 
 .footer-about
   width: 180px
@@ -37,7 +37,13 @@
   grid-template-columns: repeat(auto-fill, 24px)
   grid-gap: 20px
 
-  
+  a
+    display: flex
+    flex-flow: column
+    justify-content: center
+    align-items: center
+    font-size: 0.5rem
+
 .copyright
   text-align: center
   margin: 2rem 0
