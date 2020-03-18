@@ -95,5 +95,17 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: 'MoiTorrijos',
+        short_name: 'Moi',
+        start_url: '/',
+        background_color: '#1B33B3',
+        theme_color: '#D00000',
+        icon: 'src/assets/icon.png',
+      }
+    },
+    'gatsby-plugin-offline'
   ],
 }
