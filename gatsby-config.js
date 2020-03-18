@@ -20,10 +20,16 @@ module.exports = {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
-          `Bebas+Neue`,
-          `Raleway\:400,400i,500i,700` // you can also specify font weights and styles
-        ],
-        display: 'swap'
+          {
+            family: 'Bebas Neue',
+            subset: ['latin']
+          },
+          {
+            family: 'Raleway',
+            subset: ['latin'],
+            variants: ['400','400i','500i','700']
+          }
+        ]
       }
     },
     {
