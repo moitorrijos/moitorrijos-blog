@@ -6,7 +6,7 @@ import { MDXProvider } from "@mdx-js/react"
 
 const AboutLayout = ({ children }) => {
   return (
-    <MainLayout>
+    <MainLayout title="Acerca de mi">
       <Header />
       <div className="main-content">
         <div className="content-container">

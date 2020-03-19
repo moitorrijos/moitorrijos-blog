@@ -3,7 +3,7 @@ import MainLayout from "../components/main-layout"
 import Header from "../components/header"
 
 const Acerca = () => (
-  <MainLayout>
+  <MainLayout title="Error 404">
     <Header />
     <div className="main-content">
       <h1>Ups...Error 404</h1>

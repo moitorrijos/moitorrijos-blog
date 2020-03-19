@@ -1,13 +1,30 @@
 import React from "react"
-import MainLayout from "../components/main-layout"
 import Header from "../components/header"
+import SEO from '../components/seo'
+import Navigation from '../components/navigation'
+import Footer from '../components/footer'
 import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import "../styles/_blog.sass"
 
-const PostsLayout = ({ data: {mdx} }) => {
-  return (
-    <MainLayout>
+export const pageQuery = graphql`
+  query BlogPostQuery($id: String) {
+    mdx(id: { eq: $id }) {
+      id
+      excerpt
+      body
+      frontmatter {
+        title
+      }
+    }
+  }
+`
+
+const PostsLayout = ({ data: {mdx} }) => (
+  <>
+    <SEO title={mdx.frontmatter.title} description={mdx.excerpt}/>
+    <div className="main-container">
+      <Navigation />
       <Header />
       <div className="main-content">
         <div className="full-width-content">
@@ -19,20 +36,9 @@ const PostsLayout = ({ data: {mdx} }) => {
           </div>
         </div>
       </div>
-    </MainLayout>
-  )
-}
+      <Footer />
+    </div>
+  </>
+)
 
 export default PostsLayout
-
-export const pageQuery = graphql`
-  query BlogPostQuery($id: String) {
-    mdx(id: { eq: $id }) {
-      id
-      body
-      frontmatter {
-        title
-      }
-    }
-  }
-`

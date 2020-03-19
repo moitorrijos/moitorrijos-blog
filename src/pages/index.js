@@ -5,7 +5,7 @@ import Services from "../components/home/services"
 import Portfolio from "../components/home/portfolio"
 
 const Index = () => (
-  <MainLayout>
+  <MainLayout title="Inicio">
     <Hero />
     <div className="main-content">
       <h2 className="centered reg-ch tall-line regular body-font">

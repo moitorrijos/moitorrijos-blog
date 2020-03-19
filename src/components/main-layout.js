@@ -5,12 +5,12 @@ import "typeface-raleway"
 import "../styles/main.sass"
 import SEO from './seo.js'
 
-const MainLayout = ({ children }) => (
+const MainLayout = (props) => (
   <>
-    <SEO />
+    <SEO title={props.title} />
     <div className="main-container">
       <Navigation />
-      {children}
+      {props.children}
       <Footer />
     </div>
   </>

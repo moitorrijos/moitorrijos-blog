@@ -6,7 +6,7 @@ import ContactForm from "../components/contact-form"
 import "../styles/_contactame.sass"
 
 const ContactPage = () => (
-  <MainLayout>
+  <MainLayout title="Contáctame">
     <Header />
     <div className="main-content">
       <div className="full-width-content">

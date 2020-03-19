@@ -1,9 +1,11 @@
 import PageLayout from '../components/pages-layout.js'
+import SEO from '../components/seo.js'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 export default ({children}) => (
   <PageLayout>
+    <SEO title="Mis Servicios" />
     <h1 className="centered">Mis Servicios</h1>
     {children}
   </PageLayout>

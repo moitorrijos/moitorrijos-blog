@@ -3,12 +3,12 @@ import Header from "../components/header"
 import MainLayout from "../components/main-layout"
 import { MDXProvider } from "@mdx-js/react"
 
-const PageLayout = ({ children }) => (
-  <MainLayout>
-    <Header />
+const PageLayout = (props) => (
+  <MainLayout >
+    <Header title={props.title} />
     <div className="main-content">
       <div className="full-width-content">
-        <MDXProvider>{children}</MDXProvider>
+        <MDXProvider>{props.children}</MDXProvider>
       </div>
     </div>
   </MainLayout>

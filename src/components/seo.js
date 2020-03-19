@@ -16,13 +16,14 @@ const SEO = ({ description, lang, meta, title }) => {
     }
   `)
   const metaDescription = description || site.siteMetadata.description
+  const siteTitle = title || site.siteMetadata.title
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      title={siteTitle}
+      titleTemplate={`%s | ${site.siteMetadata.description}`}
       meta={[
         {
           name: `description`,
