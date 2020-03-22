@@ -2,6 +2,7 @@ import React from "react"
 import { useFormik } from "formik"
 import "../styles/_contact-form.sass"
 import SendIcon from "../components/icons/send-icon"
+const url = 'https://d9a7f08oni.execute-api.us-east-1.amazonaws.com/default/moitorrijosMailer'
 //TODO: Validation
 const ContactForm = () => {
   const formik = useFormik({
@@ -11,9 +12,23 @@ const ContactForm = () => {
       tuCorreo: "",
       telephone: "",
       message: "",
+      saludos: "",
     },
-    onSubmit: values => {
-      console.log(JSON.stringify(values))
+    onSubmit: async (values) => {
+      const response = await fetch(url, {
+        method: 'POST', // *GET, POST, PUT, DELETE, etc.
+        mode: 'cors', // no-cors, *cors, same-origin
+        cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+        credentials: 'same-origin', // include, *same-origin, omit
+        headers: {
+          'Content-Type': 'application/json'
+          // 'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        redirect: 'follow', // manual, *follow, error
+        referrerPolicy: 'no-referrer', // no-referrer, *client
+        body: JSON.stringify(values) // body data type must match "Content-Type" header
+      });
+      return await response.json(); // parses JSON response into native JavaScript objects
     },
   })
   return (
@@ -67,6 +82,17 @@ const ContactForm = () => {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.telephone}
+          />
+        </label>
+        <label className="saludos" htmlFor="tuCorreo">
+          Cuál es tu correo <span className="small">(necesario)</span>
+          <input
+            type="email"
+            name="tuCorreo"
+            placeholder="maria.antonieta@delasnieves.com"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.tuCorreo}
           />
         </label>
         <label htmlFor="message" className="span2">
