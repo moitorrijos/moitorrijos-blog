@@ -2,7 +2,7 @@ import React from "react"
 import { useFormik } from "formik"
 import "../styles/_contact-form.sass"
 import SendIcon from "../components/icons/send-icon"
-const url = 'https://d9a7f08oni.execute-api.us-east-1.amazonaws.com/default/moitorrijosMailer'
+const url = 'https://api.formik.com/submit/moitorrijos-contact-form/moitorrijoscom-contact-form'
 //TODO: Validation
 const ContactForm = () => {
   const formik = useFormik({
@@ -19,12 +19,10 @@ const ContactForm = () => {
         method: 'POST', // *GET, POST, PUT, DELETE, etc.
         mode: 'cors', // no-cors, *cors, same-origin
         cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-        credentials: 'same-origin', // include, *same-origin, omit
+        credentials: 'omit', // include, same-origin, *omit
         headers: {
           'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Methods': '*',
-          'Access-Control-Allow-Headers': '*'
+          'Access-Control-Allow-Origin': '*'
           // 'Content-Type': 'application/x-www-form-urlencoded',
         },
         redirect: 'follow', // manual, *follow, error
