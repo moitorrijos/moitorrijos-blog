@@ -86,14 +86,14 @@ const ContactForm = () => {
           />
         </label>
         <label className="saludos" htmlFor="tuCorreo">
-          Cuál es tu correo <span className="small">(necesario)</span>
+          Escribe un saludo <span className="small">(necesario)</span>
           <input
             type="email"
             name="tuCorreo"
             placeholder="maria.antonieta@delasnieves.com"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-            value={formik.values.tuCorreo}
+            value={formik.values.saludo}
           />
         </label>
         <label htmlFor="message" className="span2">
