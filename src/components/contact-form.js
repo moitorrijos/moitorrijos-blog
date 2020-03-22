@@ -2,7 +2,7 @@ import React from "react"
 import { useFormik } from "formik"
 import "../styles/_contact-form.sass"
 import SendIcon from "../components/icons/send-icon"
-const url = 'https://api.formik.com/submit/moitorrijos-contact-form/moitorrijoscom-contact-form'
+const url = 'https://d9a7f08oni.execute-api.us-east-1.amazonaws.com/default/moitorrijosMailer'
 //TODO: Validation
 const ContactForm = () => {
   const formik = useFormik({
