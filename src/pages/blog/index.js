@@ -7,7 +7,10 @@ import '../../styles/_blog.sass'
 const BlogPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMdx(filter: { frontmatter: { type: { eq: "post" } } }) {
+      allMdx(
+        filter: { frontmatter: { type: { eq: "post" } } }
+        sort: { order: DESC, fields: [frontmatter___date] }
+      ) {
         edges {
           node {
             id
@@ -16,7 +19,7 @@ const BlogPage = () => {
               slug
             }
             frontmatter {
-              title,
+              title
               date
             }
           }

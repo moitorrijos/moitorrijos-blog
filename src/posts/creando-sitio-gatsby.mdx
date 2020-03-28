@@ -1,0 +1,53 @@
+---
+title: Creando un Sitio Web con Gatsby
+date: 27 de Marzo de 2020
+type: post
+---
+
+import { Link, graphql } from 'gatsby'
+import Img from 'gatsby-image'
+
+Existen tantas formas de crear un sitio web que tomar la decisión de qué tecnología utilizar es una gran tarea. Debes tener una lista de todas las cosas importantes que tu sitio web necesita: 
+- Que se vea profesional.
+- Que sea fácil de usar para los visitantes.
+- Que cargue rápido.
+- Que tenga buen SEO.
+- Que sea fácil de actualizar.
+- Que sea económico de mantener.
+- Que el costo de el hospedaje no me lleve a la ruina.
+- Que sea súper seguro y prácticamente _inhackiable_ (es una verdadera palabra, googleala).
+- Que pueda mejorar el sitio con el tiempo.
+- Que le pueda agregar, quitar, y actualizar el contenido fácilmente.
+- Que le pueda agregar formularios y un área para que los usuarios puedan agregar su contenido.
+
+La lista podría ser tan larga que podrías hacer _scroll_ durante horas, pero el punto es que: *son muchas decisiones las que hay que tomar, pero sólo una herramienta (o set de herramientas) que puedes utilizar*.
+
+Qué tal si te dijera que existe una herramienta que te permite hacer todo lo que ves en la lista y más. Esta herramienta se llama Gatsby y es la que decidí utilizar para este, mi sitio web.
+
+## ¿Qué es Gatsby?
+
+Gatsby es una tecnología para crear sitios súper rápidos y seguros para la web moderna. Utiliza _React_, _GraphQL_ y _Webpack_ para crear los sitios. Estas son las tecnologías más avanzadas para la creación de todo tipo de aplicaciones, desde aplicaciones web, móviles y de escritorio.  Para iniciar un proyecto con Gatsby es necesario tener conocimiento de HTML/CSS y Javascript, pero existen formas de crear sitios con Gatsby sin tener tanto conocimiento de estos. De hecho, si utilizas Gatsby con un conocimiento básico de estas tecnologías (que son las tecnologías básicas de la web) puedes llegar a aprender mucho, ya que no hay mejor manera de aprender que haciendo cosas.
+
+## ¿Cómo Utilizas Gatsby para Crear Sitios Web?
+
+Gatsby fue creado para darle a los desarrolladores todas las herramientas modernas preconfiguradas para desarrollar sitios web. Cuando inicias un proyecto con Gatsby tienes a tu disposición una gran cantidad de _plugins_, _starters_ y otras herramientas que te ayudarán a construir tu sitio.
+
+Ya que Gatsby utiliza React, separar cada parte de la interfaz gráfica en componentes es muy fácil. Por ejemplo, puedes hacer que tu logo sea un componente, y lo puedes reutilizar, como lo hice en este sitio, puedes ver el logo en el menú de navegación (arriba) y en el pie de página del sitio (abajo). El menú de navegación es otro componente, el cual se repite en todas las páginas del sitio.
+
+Este sitio fue creado utilizando el [Hello World Starter]() de Gatsby, que es el starter más básico que hay. Pero existen _starters_ que sirven para todo tipo de sitios especializados, como sitios web para fotografías, blogs, _e-commerce_, marketing y muchos más. Puedes ver más _starters_ [dando click aquí](https://www.gatsbyjs.org/starters/?v=2). Los _starters_ son un conjunto de archivos que te permiten empezar más adelantado un proyecto.
+
+Otro de los pilares de Gatsby es que te permite utilizar la data de cualquier fuente. Por ejemplo, puedes usar la data que tienes en una instalación de WordPress, Drupal o cualquier otro CMS sin problemas. Puedes utilizar las API RESTS que vienen en mucho de estos sistemas de gestión de contenidos, o puedes utilizar _GraphQL_, que es una tecnología para consultar, o cambiar, la data de manera más eficiente. _GraphQL_ te permite además, traer data de un sistema de archivos, no sólamente de una base de datos como MariaDB, o MongoDB. Además, te permite manipular la data de manera segura ya que tiene un sistema de tipificación de data. Lo más importante de _GraphQL_ es que te permite hacer todo esto de manera más eficiente, sin buscar más o menos data de la que necesitas en pocas consultas. _GraphQL_ es una tecnología creada por los ingenieros de _Facebook_ para resolver el problema que tenían con su aplicativo móvil. Hoy en día se ha convertido en una de las tecnologías _Open Source_ más utilizadas para la creación de software.
+
+## ¿Qué hace que los Sitios hechos con Gatsby sean Rápidos?
+
+La razón por la cual Gatsby crea sitios web tan rápidos, es porque este genera cada página durante el compilado a su forma más básica (HTML/CSS/Javascript) y las envía a una red global de servidores, listas para ser entregadas a los usuarios donde sea que estén. Cada página del sitio web es generado, empaquetado, minificado, y optimizado de las mejores maneras para poder ser enviadas a una red de servidores distribuidos globalmente. En vez de subir tus archivos a un solo servidor, _Gatsby_ te permite desplegar tu sitio en una red de entrega de contenidos, tales como [Amazon Web Services](https://aws.amazon.com/), [Microsoft Azure](https://azure.microsoft.com/es-es/), [Google Cloud](https://cloud.google.com/), [Cloudflare](https://www.cloudflare.com/), entre otras. Esto es muy diferente a la forma tradicional de crear sitios web, utilizando software como WordPress, en donde los archivos HTML son generados por el servidor sólo cuando el visitante hace la primera solicitud (al entrar a tu dominio), lo que crea un gran cuello de botella para tu sitio web (haciendolo más lento).
+
+Otra razón por la que los sitios creados con Gatsby son tan rápidos es porque este genera aplicaciones web progresivas, o PWAs (por sus siglas en inglés). Las PWAs sólo cargan la data crítica al inicio, dándole a los visitantes del sitio una mejor experiencia, porque obtienen su información más rápida, sin tener que esperar que cargue todo el sitio, o esperar por recursos innecesarios. Esto es muy importante para los usuarios que visitan un sitio desde sus móviles, que son la gran mayoría.
+
+Además, las PWAs pueden ser completamente guardadas (cacheadas) en el dispositivo, haciendo que el sitio web esté disponible inclusive cuando no hay conección de internet. Intenta cargar este sitio otra vez, pero sin conección. Mientras estás leyendo este post, mi sitio que es un PWA, está extrayendo la data de las otras páginas en un proceso en el fondo, como por ejemplo la página de <Link to="/contactame">contacto</Link>, o la página de <Link to="/trabajos">mis trabajos</Link>, para que cuando vayas a una de esas páginas ya estén ahí y carguen instantáneamente.
+
+Otra razón muy importante es que _Gatsby_ con la ayuda de _GraphQL_ optimiza las imágenes de la mejor manera posible. _Gatsby_ inteligentemente convierte las imágenes en marcadores los cuales cargan progresivamente, ya sea como lo hice en mi sitio de un SVG o de una imagen borrosa, a la imagen completa en su máxima expresión. Adicionalmente, _Gatsby_ con la ayuda de _GraphQL_ convierte las imágenes al formato _WEBP_, es el formato de archivos para imágenes creado por Google, para reducir el tamaño de las imágenes (jpg) hasta por un 34%, sin perder su resolución. Esto hace que la carga de las imágenes sea más rápida aún. Finalmente, _GraphQL_ hace toda esta magia mucho antes de la primera visita por los usuarios, inclusive antes de desplegarla a la red de servidores.
+
+_Gatsby_ utiliza la filosofía de [JAMStack](https://jamstack.org/) para crear sus sitios web y hacerlos a prueba del futuro. Las _JAMStack (Javascript Marckup y APIs)_ son sitios y apps creados al generar los archivos más óptimos y servirlos a través de una red distribuida de servidores. De esta manera _Gatsby_ crea sitios y aplicaciones web que cargan más rápidos, son más seguros, más económicas de mantener y se ven excepcionales. A diferencia de sitios creados de la manera tradicional, con un sistema que genera los archivos básicos sólo cuando el usuario visita el sitio.
+
+Espero que este post te haya ayudado a decidir utilizar _Gatsby_ para tu próximo proyecto. No te preocupes si no conoces muy bien de la tecnología. Sólo sigue los tutoriales y la excelente documentación en su sitio web [GatsbyJS.org](https://www.gatsbyjs.org/).
