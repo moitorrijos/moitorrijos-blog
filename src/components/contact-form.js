@@ -2,7 +2,7 @@ import React from "react"
 import { useFormik } from "formik"
 import "../styles/_contact-form.sass"
 import SendIcon from "../components/icons/send-icon"
-const url = 'https://d9a7f08oni.execute-api.us-east-1.amazonaws.com/default/moitorrijosMailer'
+const url = 'https://j7qtz60nm7.execute-api.us-east-1.amazonaws.com/dev/static-site-mailer'
 //TODO: Validation
 const ContactForm = () => {
   const formik = useFormik({
@@ -61,6 +61,7 @@ const ContactForm = () => {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.tuNombre}
+            required="required"
           />
         </label>
         <label htmlFor="tuCorreo">
@@ -72,6 +73,7 @@ const ContactForm = () => {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.tuCorreo}
+            required="required"
           />
         </label>
         <label htmlFor="telephone">
@@ -89,7 +91,7 @@ const ContactForm = () => {
           Escribe un saludo <span className="small">(necesario)</span>
           <input
             type="email"
-            name="tuCorreo"
+            name="saludos"
             placeholder="maria.antonieta@delasnieves.com"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
@@ -104,10 +106,15 @@ const ContactForm = () => {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.message}
+            required="required"
           />
         </label>
       </div>
-      <button className="primary-button" type="submit">
+      <button
+        type="submit"
+        className="primary-button"
+        disabled={formik.isSubmitting}
+      >
         <SendIcon />
         Enviar
       </button>

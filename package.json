@@ -37,6 +37,7 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
+    "serverless": "^1.67.0",
     "typeface-raleway": "0.0.75"
   },
   "devDependencies": {
