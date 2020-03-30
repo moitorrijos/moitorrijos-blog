@@ -24,7 +24,7 @@ const ContactForm = () => {
             'Access-Control-Allow-Origin': '*'
           },
         }
-        const response = await axios.post(url, values, config)
+        const response = await axios.post(url, JSON.stringify(values), config)
         if (response.statusCode === 200) {
           setStatus('success')
           setMessage('Gracias, el mensaje ha sido enviado.')
