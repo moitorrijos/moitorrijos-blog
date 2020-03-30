@@ -21,7 +21,8 @@ const ContactForm = () => {
       const errorMessage = 'Disculpa, ha ocurrido un error. Inténtalo de nuevo más tarde o contáctame por WhatsApp con el botón de arriba.'
       const config = {
         headers: {
-          'x-dsi-restful': 1,
+          'Accept': 'application/json',
+          'Access-Control-Allow-Origin': '*'
         },
       }
       try {

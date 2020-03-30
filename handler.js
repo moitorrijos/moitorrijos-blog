@@ -1,7 +1,7 @@
 const AWS = require('aws-sdk')
 const SES = new AWS.SES()
 const miCorreo = 'moitorrijos@gmail.com'
-const miWebsite = 'https://moitorrijos.com'
+const miWebsite = 'https://www.moitorrijos.com/contactame'
 
 function sendEmail(formData, callback) {
   const emailParams = {
