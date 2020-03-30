@@ -33,7 +33,7 @@ function sendEmail(formData, callback) {
 }
 
 module.exports.staticSiteMailer = async (event, context, callback) => {
-  const formData = event.body
+  const formData = JSON.parse(event)
 
   sendEmail(formData, function(err, data) {
     const response = {

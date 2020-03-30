@@ -1,10 +1,8 @@
 {
-  "body": {
-    "tema": "Quiero decir hola",
-    "tuNombre": "Moi Torrijos",
-    "tuCorreo": "moi@moi.com",
-    "telephone": "66778899",
-    "message": "Hola Moi",
-    "saludos": ""
-  }
+  "tema": "Quiero decir hola",
+  "tuNombre": "Moi Torrijos",
+  "tuCorreo": "moi@moi.com",
+  "telephone": "66778899",
+  "message": "Hola Moi",
+  "saludos": ""
 }

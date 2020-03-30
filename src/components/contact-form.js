@@ -4,7 +4,7 @@ import SendIcon from "../components/icons/send-icon"
 import axios from 'axios'
 import "../styles/_contact-form.sass"
 const url = 'https://j7qtz60nm7.execute-api.us-east-1.amazonaws.com/dev/static-site-mailer'
-
+const errorMessage = 'Disculpa, ha ocurrido un error. Inténtalo de nuevo más tarde o contáctame por WhatsApp con el botón de arriba.'
 const ContactForm = () => {
   const [ message, setMessage ] = useState('')
   const [ status, setStatus ] = useState('success')
@@ -18,18 +18,17 @@ const ContactForm = () => {
       saludos: "",
     },
     onSubmit: async (values) => {
-      const errorMessage = 'Disculpa, ha ocurrido un error. Inténtalo de nuevo más tarde o contáctame por WhatsApp con el botón de arriba.'
-      const config = {
-        headers: {
-          'Accept': 'application/json',
-          'Access-Control-Allow-Origin': '*'
-        },
-      }
       try {
+        const config = {
+          headers: {
+            'Accept': 'application/json',
+            'Access-Control-Allow-Origin': '*'
+          },
+        }
         const response = await axios.post(url, values, config)
         if (response.statusCode === 200) {
           setStatus('success')
-          setMessage('Gracias, el mensaje ha sido enviado')
+          setMessage('Gracias, el mensaje ha sido enviado.')
         } else {
           setStatus('error')
           setMessage(errorMessage)
