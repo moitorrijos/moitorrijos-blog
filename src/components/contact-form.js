@@ -1,10 +1,13 @@
-import React from "react"
+import React, { useState } from "react"
 import { useFormik } from "formik"
-import "../styles/_contact-form.sass"
 import SendIcon from "../components/icons/send-icon"
+import axios from 'axios'
+import "../styles/_contact-form.sass"
 const url = 'https://j7qtz60nm7.execute-api.us-east-1.amazonaws.com/dev/static-site-mailer'
-//TODO: Validation
+
 const ContactForm = () => {
+  const [ message, setMessage ] = useState('')
+  const [ confirmation, setConfirmation ] = useState('success')
   const formik = useFormik({
     initialValues: {
       tema: "Quiero decir hola",
@@ -15,21 +18,22 @@ const ContactForm = () => {
       saludos: "",
     },
     onSubmit: async (values) => {
-      const response = await fetch(url, {
-        method: 'POST', // *GET, POST, PUT, DELETE, etc.
-        mode: 'cors', // no-cors, *cors, same-origin
-        cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-        credentials: 'omit', // include, same-origin, *omit
-        headers: {
-          'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': '*'
-          // 'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        redirect: 'follow', // manual, *follow, error
-        referrerPolicy: 'no-referrer', // no-referrer, *client
-        body: JSON.stringify(values) // body data type must match "Content-Type" header
-      });
-      return await response.json(); // parses JSON response into native JavaScript objects
+      const errorMessage = 'Disculpa, ha ocurrido un error. Inténtalo de nuevo más tarde o contáctame por WhatsApp con el botón de arriba.'
+      try {
+        const response = await axios.post(url, values)
+        if (response.statusCode === 200) {
+          setConfirmation('success')
+          setMessage('Gracias, el mensaje ha sido enviado')
+        } else {
+          setConfirmation('error')
+          setMessage(errorMessage)
+        }
+        return await response.json(); // parses JSON response into native JavaScript objects
+      } catch(error) {
+        setConfirmation('error')
+        setMessage(errorMessage)
+        console.log(error)
+      }
     },
   })
   return (
@@ -118,6 +122,11 @@ const ContactForm = () => {
         <SendIcon />
         Enviar
       </button>
+      {(message && 
+        <div className={`message ${confirmation}`}>
+          <p>{ message }</p>
+        </div>
+      )}
     </form>
   )
 }

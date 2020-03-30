@@ -34,3 +34,17 @@
       image: url('../assets/select-arrow.svg')
       repeat: no-repeat
       position: center right 1rem
+
+@mixin messageConfirmation($color)
+  background-color: $color
+  color: lighten($color, 75%)
+  border: 1px solid darken($color, 25%)
+
+.message
+  margin-top: 1rem
+  padding: 1rem 2rem
+  border-radius: 0.5rem
+  &.success
+    @include messageConfirmation($terciary-color)
+  &.error
+    @include messageConfirmation($secondary-color)
