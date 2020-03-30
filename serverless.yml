@@ -16,7 +16,17 @@ functions:
       - http:
           method: post
           path: static-site-mailer
-          cors: true
+          cors: 
+            origins:
+              - http://*.moitorrijos.com
+            headers:
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+              - X-Amz-User-Agent
+            allowCredentials: false
 
 package:
   exclude:

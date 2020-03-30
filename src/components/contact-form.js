@@ -22,7 +22,6 @@ const ContactForm = () => {
         const config = {
           headers: {
             'Accept': 'application/json',
-            'Access-Control-Allow-Origin': '*'
           },
         }
         const response = await axios.post(url, values, config)

@@ -42,7 +42,8 @@ module.exports.staticSiteMailer = async (event, context, callback) => {
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': miWebsite,
         'Access-Control-Allow-Headers': 'Content-Type',
-        'Access-Control-Allow-Methods': 'OPTIONS,POST,GET'
+        'Access-Control-Allow-Methods': 'POST',
+        'Access-Control-Allow-Credentials': false
       },
       body: JSON.stringify({
         message: err ? err.message : data,
