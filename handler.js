@@ -33,17 +33,14 @@ function sendEmail(formData, callback) {
 }
 
 module.exports.staticSiteMailer = async (event, context, callback) => {
-  const formData = JSON.parse(event)
+  const formData = event
 
   sendEmail(formData, function(err, data) {
     const response = {
       statusCode: err ? 500 : 200,
       headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': miWebsite,
-        'Access-Control-Allow-Headers': 'Content-Type',
-        'Access-Control-Allow-Methods': 'POST',
-        'Access-Control-Allow-Credentials': false
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Credentials': true
       },
       body: JSON.stringify({
         message: err ? err.message : data,
