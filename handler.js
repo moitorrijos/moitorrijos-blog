@@ -46,6 +46,7 @@ module.exports.staticSiteMailer = async (event, context, callback) => {
         message: err ? err.message : data,
       }),
     }
+    console.log(response)
     callback(null, response)
   })
 }
