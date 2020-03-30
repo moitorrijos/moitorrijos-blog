@@ -7,7 +7,7 @@ const url = 'https://j7qtz60nm7.execute-api.us-east-1.amazonaws.com/dev/static-s
 
 const ContactForm = () => {
   const [ message, setMessage ] = useState('')
-  const [ confirmation, setConfirmation ] = useState('success')
+  const [ status, setStatus ] = useState('success')
   const formik = useFormik({
     initialValues: {
       tema: "Quiero decir hola",
@@ -19,18 +19,23 @@ const ContactForm = () => {
     },
     onSubmit: async (values) => {
       const errorMessage = 'Disculpa, ha ocurrido un error. Inténtalo de nuevo más tarde o contáctame por WhatsApp con el botón de arriba.'
+      const config = {
+        headers: {
+          'x-dsi-restful': 1,
+        },
+      }
       try {
-        const response = await axios.post(url, values)
+        const response = await axios.post(url, values, config)
         if (response.statusCode === 200) {
-          setConfirmation('success')
+          setStatus('success')
           setMessage('Gracias, el mensaje ha sido enviado')
         } else {
-          setConfirmation('error')
+          setStatus('error')
           setMessage(errorMessage)
         }
         return await response.json(); // parses JSON response into native JavaScript objects
       } catch(error) {
-        setConfirmation('error')
+        setStatus('error')
         setMessage(errorMessage)
         console.log(error)
       }
@@ -123,7 +128,7 @@ const ContactForm = () => {
         Enviar
       </button>
       {(message && 
-        <div className={`message ${confirmation}`}>
+        <div className={`message ${status}`}>
           <p>{ message }</p>
         </div>
       )}

@@ -32,7 +32,7 @@ function sendEmail(formData, callback) {
   SES.sendEmail(emailParams, callback)
 }
 
-module.exports.staticSiteMailer = async event => {
+module.exports.staticSiteMailer = async (event, context, callback) => {
   const formData = event.body
 
   sendEmail(formData, function(err, data) {
@@ -41,6 +41,8 @@ module.exports.staticSiteMailer = async event => {
       headers: {
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': miWebsite,
+        'Access-Control-Allow-Headers': 'Content-Type',
+        'Access-Control-Allow-Methods': 'OPTIONS,POST,GET'
       },
       body: JSON.stringify({
         message: err ? err.message : data,
