@@ -34,7 +34,7 @@ function sendEmail(formData, callback) {
 
 module.exports.staticSiteMailer = async (event, context, callback) => {
   const formData = event
-
+  AWS.config.update({ region: 'us-east-1' })
   sendEmail(formData, function(err, data) {
     const response = {
       statusCode: err ? 500 : 200,
@@ -47,6 +47,7 @@ module.exports.staticSiteMailer = async (event, context, callback) => {
       }),
     }
     console.log(response)
+    context.done(null, 'hello')
     callback(null, response)
   })
 }
