@@ -36,7 +36,7 @@ const ContactForm = () => {
       } catch(error) {
         setStatus('error')
         setMessage(errorMessage)
-        console.log(error)
+        console.error(error)
       }
     },
   })
