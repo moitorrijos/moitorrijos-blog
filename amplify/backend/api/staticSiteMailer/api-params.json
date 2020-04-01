@@ -1,0 +1,40 @@
+{
+    "paths": [
+        {
+            "name": "/static-site-mailer",
+            "lambdaFunction": "staticSiteMailer",
+            "privacy": {
+                "protected": true,
+                "auth": [
+                    "/POST"
+                ],
+                "unauth": [
+                    "/POST"
+                ]
+            }
+        }
+    ],
+    "resourceName": "staticSiteMailer",
+    "apiName": "staticSiteMailer",
+    "functionArns": [
+        {
+            "lambdaFunction": "staticSiteMailer"
+        }
+    ],
+    "privacy": {
+        "auth": 1,
+        "unauth": 1,
+        "authRoleName": "amplify-moitorrijos-dev-165934-authRole",
+        "unAuthRoleName": "amplify-moitorrijos-dev-165934-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "staticSiteMailer",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
