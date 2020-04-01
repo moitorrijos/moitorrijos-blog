@@ -1,0 +1,7 @@
+{
+    "dev": {
+        "configLevel": "project",
+        "useProfile": false,
+        "awsConfigFilePath": "/Users/juanmoisestorrijos/.amplify/awscloudformation/rC3xXjtg3m"
+    }
+}
