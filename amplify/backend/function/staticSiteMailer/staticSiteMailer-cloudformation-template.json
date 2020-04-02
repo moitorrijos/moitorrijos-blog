@@ -63,7 +63,7 @@
 				"Timeout": "25",
 				"Code": {
 					"S3Bucket": "amplify-moitorrijos-dev-201854-deployment",
-					"S3Key": "amplify-builds/staticSiteMailer-39506758586d55413355-build.zip"
+					"S3Key": "amplify-builds/staticSiteMailer-482f6d394b4d44664f4e-build.zip"
 				}
 			}
 		},
