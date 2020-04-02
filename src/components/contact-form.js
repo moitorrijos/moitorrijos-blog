@@ -31,7 +31,7 @@ const ContactForm = () => {
     },
     onSubmit: async (values) => {
       try {
-        const response = await postData(JSON.stringify(values))
+        const response = await postData(values)
         if (response.statusCode === 200) {
           setStatus('success')
           setMessage('Gracias, el mensaje ha sido enviado.')
