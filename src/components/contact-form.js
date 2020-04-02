@@ -3,15 +3,7 @@ import { useFormik } from "formik"
 import SendIcon from "../components/icons/send-icon"
 import { API } from 'aws-amplify'
 import "../styles/_contact-form.sass"
-const url = 'https://lzsssd4mki.execute-api.us-east-1.amazonaws.com/dev/staic-site-mailer'
 const errorMessage = 'Disculpa, ha ocurrido un error. Inténtalo de nuevo más tarde o contáctame por WhatsApp con el botón de arriba.'
-
-let apiName = 'MyApiName'; // replace this with your api name.
-let path = '/path'; //replace this with the path you have configured on your API
-let myInit = {
-    body: {}, // replace this with attributes you need
-    headers: {} // OPTIONAL
-}
 
 async function postData(values) { 
   let apiName = 'staticSiteMailer';

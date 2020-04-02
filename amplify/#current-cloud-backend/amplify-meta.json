@@ -17,21 +17,21 @@
 			"build": true,
 			"providerPlugin": "awscloudformation",
 			"service": "Lambda",
-			"lastBuildTimeStamp": "2020-04-02T18:16:43.548Z",
-			"lastPackageTimeStamp": "2020-04-02T18:16:44.112Z",
-			"distZipFilename": "staticSiteMailer-58644e7a34746d537277-build.zip",
+			"lastBuildTimeStamp": "2020-04-02T19:23:22.483Z",
+			"lastPackageTimeStamp": "2020-04-02T19:23:23.067Z",
+			"distZipFilename": "staticSiteMailer-482f6d394b4d44664f4e-build.zip",
 			"providerMetadata": {
 				"s3TemplateURL": "https://s3.amazonaws.com/amplify-moitorrijos-dev-201854-deployment/amplify-cfn-templates/function/staticSiteMailer-cloudformation-template.json",
 				"logicalId": "functionstaticSiteMailer"
 			},
-			"lastPushTimeStamp": "2020-04-02T18:17:54.361Z",
+			"lastPushTimeStamp": "2020-04-02T19:24:33.045Z",
 			"output": {
 				"Region": "us-east-1",
 				"Arn": "arn:aws:lambda:us-east-1:512656686895:function:staticSiteMailer-dev",
 				"Name": "staticSiteMailer-dev",
 				"LambdaExecutionRole": "moitorrijosLambdaRole53b73274-dev"
 			},
-			"lastPushDirHash": "IK7aDWpskUAByVJvy7uRn0dfnwA="
+			"lastPushDirHash": "/ybI9v/NhEuhYWFPnOjDpRNuJJE="
 		}
 	},
 	"api": {
@@ -52,7 +52,7 @@
 				"s3TemplateURL": "https://s3.amazonaws.com/amplify-moitorrijos-dev-201854-deployment/amplify-cfn-templates/api/staticSiteMailer-cloudformation-template.json",
 				"logicalId": "apistaticSiteMailer"
 			},
-			"lastPushTimeStamp": "2020-04-02T18:17:54.359Z",
+			"lastPushTimeStamp": "2020-04-02T19:24:33.040Z",
 			"output": {
 				"ApiName": "staticSiteMailer",
 				"RootUrl": "https://lzsssd4mki.execute-api.us-east-1.amazonaws.com/dev",
