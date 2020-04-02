@@ -1,6 +1,7 @@
 const awsServerlessExpress = require('aws-serverless-express');
 const app = require('./app')
 const AWS = require('aws-sdk')
+AWS.config.update({region:'us-east-1'})
 const SES = new AWS.SES()
 const miCorreo = 'moitorrijos@gmail.com'
 const miSitio = 'https://www.moitorrijos.com'
@@ -39,7 +40,7 @@ function sendEmail(formData, callback) {
 exports.handler = (event, context, callback) => {
   console.log(`EVENT: ${JSON.stringify(event)}`)
   awsServerlessExpress.proxy(server, event, context)
-  const formData = JSON.parse(event.body)
+  const formData = event
 
   sendEmail(formData, function(err, data) {
     const response = {

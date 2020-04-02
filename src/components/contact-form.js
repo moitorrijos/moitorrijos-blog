@@ -1,10 +1,30 @@
 import React, { useState } from "react"
 import { useFormik } from "formik"
 import SendIcon from "../components/icons/send-icon"
-import axios from 'axios'
+import { API } from 'aws-amplify'
 import "../styles/_contact-form.sass"
 const url = 'https://lzsssd4mki.execute-api.us-east-1.amazonaws.com/dev/staic-site-mailer'
 const errorMessage = 'Disculpa, ha ocurrido un error. Inténtalo de nuevo más tarde o contáctame por WhatsApp con el botón de arriba.'
+
+let apiName = 'MyApiName'; // replace this with your api name.
+let path = '/path'; //replace this with the path you have configured on your API
+let myInit = {
+    body: {}, // replace this with attributes you need
+    headers: {} // OPTIONAL
+}
+
+async function postData(values) { 
+  let apiName = 'staticSiteMailer';
+  let path = '/static-site-mailer';
+  let myInit = { // OPTIONAL
+      body: values, // replace this with attributes you need
+      headers: {
+        'Access-Control-Allow-Origin': '*'
+      } // OPTIONAL
+  }
+  return await API.post(apiName, path, myInit);
+}
+
 const ContactForm = () => {
   const [ message, setMessage ] = useState('')
   const [ status, setStatus ] = useState('success')
@@ -19,12 +39,7 @@ const ContactForm = () => {
     },
     onSubmit: async (values) => {
       try {
-        const config = {
-          headers: {
-            'Access-Control-Allow-Origin': '*'
-          },
-        }
-        const response = await axios.post(url, JSON.stringify(values), config)
+        const response = await postData(JSON.stringify(values))
         if (response.statusCode === 200) {
           setStatus('success')
           setMessage('Gracias, el mensaje ha sido enviado.')

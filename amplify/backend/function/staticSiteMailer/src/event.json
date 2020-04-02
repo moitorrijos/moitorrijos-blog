@@ -1,5 +1,8 @@
 {
-  "key1": "value1",
-  "key2": "value2",
-  "key3": "value3"
+    "tema": "Quiero decir hola",
+    "tuNombre": "Moi Torrijos",
+    "tuCorreo": "moi@moi.com",
+    "telephone": "66778899",
+    "message": "Hola desde el servidor.",
+    "saludos": ""
 }
