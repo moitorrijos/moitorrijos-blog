@@ -6,12 +6,6 @@
 			"service": "Lambda"
 		}
 	},
-	"auth": {
-		"cognito72806041": {
-			"service": "Cognito",
-			"providerPlugin": "awscloudformation"
-		}
-	},
 	"api": {
 		"staticSiteMailer": {
 			"service": "API Gateway",

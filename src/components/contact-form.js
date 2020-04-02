@@ -3,7 +3,7 @@ import { useFormik } from "formik"
 import SendIcon from "../components/icons/send-icon"
 import axios from 'axios'
 import "../styles/_contact-form.sass"
-const url = 'https://j7qtz60nm7.execute-api.us-east-1.amazonaws.com/dev/static-site-mailer'
+const url = 'https://lzsssd4mki.execute-api.us-east-1.amazonaws.com/dev/staic-site-mailer'
 const errorMessage = 'Disculpa, ha ocurrido un error. Inténtalo de nuevo más tarde o contáctame por WhatsApp con el botón de arriba.'
 const ContactForm = () => {
   const [ message, setMessage ] = useState('')
@@ -120,11 +120,11 @@ const ContactForm = () => {
       </div>
       <button
         type="submit"
-        className="primary-button"
+        className={formik.isSubmitting ? 'primary-button sending' : 'primary-button'}
         disabled={formik.isSubmitting}
       >
         <SendIcon />
-        Enviar
+        {formik.isSubmitting ? 'Enviando' : 'Enviar'}
       </button>
       {(message && 
         <div className={`message ${status}`}>

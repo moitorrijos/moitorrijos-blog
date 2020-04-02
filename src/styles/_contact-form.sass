@@ -36,6 +36,31 @@
       repeat: no-repeat
       position: center right 1rem
 
+$button-width: 180px
+
+button.primary-button
+  width: $button-width
+  display: flex
+  flex-flow: row nowrap
+  justify-content: center
+  cursor: pointer
+
+@keyframes loadingSubmit
+	0%
+		background-position-x: 0
+	100%
+		background-position-x: $button-width
+
+button.sending
+  background: linear-gradient(to right, $primary-color, lighten($primary-color, 10%), $primary-color)
+  background-size: $button-width
+  animation:
+    duration: 1s
+    fill-mode: forwards
+    iteration-count: infinite
+    timing-function: linear
+    name: loadingSubmit
+
 @mixin messageConfirmation($color)
   background-color: $color
   color: lighten($color, 75%)

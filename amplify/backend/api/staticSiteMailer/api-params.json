@@ -1,16 +1,10 @@
 {
     "paths": [
         {
-            "name": "/static-site-mailer",
+            "name": "/staic-site-mailer",
             "lambdaFunction": "staticSiteMailer",
             "privacy": {
-                "protected": true,
-                "auth": [
-                    "/POST"
-                ],
-                "unauth": [
-                    "/POST"
-                ]
+                "open": true
             }
         }
     ],
@@ -22,10 +16,10 @@
         }
     ],
     "privacy": {
-        "auth": 1,
-        "unauth": 1,
-        "authRoleName": "amplify-moitorrijos-dev-165934-authRole",
-        "unAuthRoleName": "amplify-moitorrijos-dev-165934-unauthRole"
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-moitorrijos-dev-201854-authRole",
+        "unAuthRoleName": "amplify-moitorrijos-dev-201854-unauthRole"
     },
     "dependsOn": [
         {
