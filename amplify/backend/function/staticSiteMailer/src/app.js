@@ -17,11 +17,15 @@ Amplify Params - DO NOT EDIT */
 var express = require('express')
 var bodyParser = require('body-parser')
 var awsServerlessExpressMiddleware = require('aws-serverless-express/middleware')
+var cors = require('cors')
 
 // declare a new express app
 var app = express()
 app.use(bodyParser.json())
 app.use(awsServerlessExpressMiddleware.eventContext())
+app.use(cors())
+
+
 
 // Enable CORS for all methods
 app.use(function(req, res, next) {
@@ -30,6 +34,7 @@ app.use(function(req, res, next) {
   next()
 });
 
+app.options('*', cors())
 
 /**********************
  * Example get method *

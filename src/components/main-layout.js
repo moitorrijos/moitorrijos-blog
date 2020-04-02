@@ -7,7 +7,7 @@ import SEO from './seo.js'
 
 const MainLayout = (props) => (
   <>
-    <SEO title={props.title} />
+    <SEO title={props.title || 'Juan Moisés Torrijo'} />
     <div className="main-container">
       <Navigation />
       {props.children}
