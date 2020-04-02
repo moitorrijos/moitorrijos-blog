@@ -32,7 +32,7 @@ const ContactForm = () => {
     onSubmit: async (values) => {
       try {
         const response = await postData(values)
-        if (response.statusCode === 200) {
+        if (response.success) {
           setStatus('success')
           setMessage('Gracias, el mensaje ha sido enviado.')
         } else {

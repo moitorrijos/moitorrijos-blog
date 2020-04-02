@@ -54,7 +54,7 @@ app.get('/staic-site-mailer/*', function(req, res) {
 
 app.post('/staic-site-mailer', function(req, res) {
   // Add your code here
-  res.json({success: 'post call succeed!', url: req.url, body: req.body})
+  res.json({success: true, url: req.url, body: req.body})
 });
 
 app.post('/staic-site-mailer/*', function(req, res) {
