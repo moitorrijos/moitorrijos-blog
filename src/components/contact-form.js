@@ -6,15 +6,15 @@ import "../styles/_contact-form.sass"
 const errorMessage = 'Disculpa, ha ocurrido un error. Inténtalo de nuevo más tarde o contáctame por WhatsApp con el botón de arriba.'
 
 async function postData(values) { 
-  let apiName = 'staticSiteMailer';
-  let path = '/static-site-mailer';
+  let apiName = 'staticSiteMailer'
+  let path = '/static-site-mailer'
   let myInit = { // OPTIONAL
       body: values, // replace this with attributes you need
       headers: {
         'Access-Control-Allow-Origin': '*'
       } // OPTIONAL
   }
-  return await API.post(apiName, path, myInit);
+  return await API.post(apiName, path, myInit)
 }
 
 const ContactForm = () => {
