@@ -5,10 +5,10 @@ import WhatsappIcon from "../components/icons/whatsapp-icon"
 import ContactForm from "../components/contact-form"
 import "../styles/_contactame.sass"
 
-import Amplify from 'aws-amplify';
-import awsconfig from '../aws-exports';
+import Amplify from 'aws-amplify'
+import awsconfig from '../aws-exports'
 
-Amplify.configure(awsconfig);
+Amplify.configure(awsconfig)
 
 const ContactPage = () => (
   <MainLayout title="Contáctame">

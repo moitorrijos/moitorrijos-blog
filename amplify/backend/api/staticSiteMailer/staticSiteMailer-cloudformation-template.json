@@ -90,7 +90,7 @@
             ],
             "paths": {
               
-              "/staic-site-mailer": {
+              "/static-site-mailer": {
                 "options": {
                   "consumes": [
                     "application/json"
@@ -189,7 +189,7 @@
                   }
                 }
               },
-              "/staic-site-mailer/{proxy+}": {
+              "/static-site-mailer/{proxy+}": {
                 "options": {
                   "consumes": [
                     "application/json"
@@ -367,7 +367,7 @@
         
         
         
-      "DeploymentAPIGWstaticSiteMailer": {
+      "DeploymentAPIGWstaticSiteMailer32b4668d": {
         "Type": "AWS::ApiGateway::Deployment",
         "Properties": {
           "Description": "The Development stage deployment of your API.",

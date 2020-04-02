@@ -1,7 +1,7 @@
 {
     "paths": [
         {
-            "name": "/staic-site-mailer",
+            "name": "/static-site-mailer",
             "lambdaFunction": "staticSiteMailer",
             "privacy": {
                 "open": true
@@ -30,5 +30,6 @@
                 "Arn"
             ]
         }
-    ]
+    ],
+    "uuid": "32b4668d"
 }
