@@ -6,7 +6,7 @@ import ContactForm from "../components/contact-form"
 import "../styles/_contactame.sass"
 
 import Amplify from 'aws-amplify';
-import awsconfig from './aws-exports';
+import awsconfig from '../aws-exports';
 
 Amplify.configure(awsconfig);
 
