@@ -22,17 +22,20 @@ const ContactForm = () => {
   const [ status, setStatus ] = useState('success')
   const formik = useFormik({
     initialValues: {
-      tema: "Quiero decir hola",
-      tuNombre: "",
-      tuCorreo: "",
-      telephone: "",
-      message: "",
-      saludos: "",
+      body: {
+        tema: "Quiero decir hola",
+        tuNombre: "",
+        tuCorreo: "",
+        telephone: "",
+        message: "",
+        saludos: ""
+      }
     },
     onSubmit: async (values) => {
       try {
-        const response = await postData(values)
-        if (response.success) {
+        const response = await postData(JSON.stringify(values))
+        console.log(response)
+        if (response.success === 'post call succeed!') {
           setStatus('success')
           setMessage('Gracias, el mensaje ha sido enviado.')
         } else {
