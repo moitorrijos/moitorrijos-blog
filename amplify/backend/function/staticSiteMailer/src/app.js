@@ -18,6 +18,7 @@ var express = require('express')
 var bodyParser = require('body-parser')
 var awsServerlessExpressMiddleware = require('aws-serverless-express/middleware')
 var cors = require('cors')
+var handler = require('./index')
 
 // declare a new express app
 var app = express()
@@ -39,7 +40,7 @@ app.options('*', cors())
  **********************/
 
 app.get('/staic-site-mailer', function(req, res) {
-  // Add your code here
+  handler(JSON.stringify(req))
   res.json({success: 'get call succeed!', url: req.url});
 });
 

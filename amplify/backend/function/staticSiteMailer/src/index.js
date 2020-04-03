@@ -33,7 +33,6 @@ function sendEmail(formData, callback) {
       },
     },
   }
-
   SES.sendEmail(emailParams, callback)
 }
 
@@ -41,7 +40,6 @@ exports.handler = (event, context, callback) => {
   console.log(`EVENT: ${JSON.stringify(event)}`)
   awsServerlessExpress.proxy(server, event, context)
   const formData = event
-
   sendEmail(formData, function(err, data) {
     const response = {
       statusCode: err ? 500 : 200,
@@ -53,7 +51,6 @@ exports.handler = (event, context, callback) => {
         message: err ? err.message : data,
       }),
     }
-
     callback(null, response)
   })
 }
