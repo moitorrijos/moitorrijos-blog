@@ -22,14 +22,12 @@ const ContactForm = () => {
   const [ status, setStatus ] = useState('success')
   const formik = useFormik({
     initialValues: {
-      body: {
-        tema: "Quiero decir hola",
-        tuNombre: "",
-        tuCorreo: "",
-        telephone: "",
-        message: "",
-        saludos: ""
-      }
+      tema: "Quiero decir hola",
+      tuNombre: "",
+      tuCorreo: "",
+      telephone: "",
+      message: "",
+      saludos: ""
     },
     onSubmit: async (values) => {
       try {
