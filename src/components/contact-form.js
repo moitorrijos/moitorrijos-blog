@@ -1,21 +1,9 @@
 import React, { useState } from "react"
 import { useFormik } from "formik"
 import SendIcon from "../components/icons/send-icon"
-import { API } from 'aws-amplify'
 import "../styles/_contact-form.sass"
 const errorMessage = 'Disculpa, ha ocurrido un error. Inténtalo de nuevo más tarde o contáctame por WhatsApp con el botón de arriba.'
 
-async function postData(values) { 
-  let apiName = 'staticSiteMailer'
-  let path = '/static-site-mailer'
-  let myInit = { // OPTIONAL
-      body: values, // replace this with attributes you need
-      headers: {
-        'Access-Control-Allow-Origin': '*'
-      } // OPTIONAL
-  }
-  return await API.post(apiName, path, myInit)
-}
 
 const ContactForm = () => {
   const [ message, setMessage ] = useState('')
@@ -31,7 +19,13 @@ const ContactForm = () => {
     },
     onSubmit: async (values) => {
       try {
-        const response = await postData(JSON.stringify(values))
+        const response = fetch('https://api.formik.com/submit/moitorrijos-contact-form/moitorrijoscom-contact-form', {
+          method: 'POST',
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(values),
+        })
         console.log(response)
         if (response.success === 'post call succeed!') {
           setStatus('success')
