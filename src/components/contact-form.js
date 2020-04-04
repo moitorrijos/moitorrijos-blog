@@ -19,7 +19,7 @@ const ContactForm = () => {
     },
     onSubmit: async (values) => {
       try {
-        const response = fetch('https://api.formik.com/submit/moitorrijos-contact-form/moitorrijoscom-contact-form', {
+        const response = await fetch('https://api.formik.com/submit/moitorrijos-contact-form/moitorrijoscom-contact-form', {
           method: 'POST',
           headers: {
             "Content-Type": "application/json",
@@ -27,7 +27,7 @@ const ContactForm = () => {
           body: JSON.stringify(values),
         })
         console.log(response)
-        if (response.success === 'post call succeed!') {
+        if (response.ok) {
           setStatus('success')
           setMessage('Gracias, el mensaje ha sido enviado.')
         } else {

@@ -62,10 +62,22 @@ const Footer = () => (
     </div>
     <p className="copyright">
       © {new Date().getFullYear()} Juan Moisés Torrijos todos los derechos
-      reservados. Ciudad de Panamá{" "}
+      reservados. Hecho con{" "}
+      <span role="img" aria-label="Amor">
+      ❤️
+      </span>
+      Ciudad de Panamá{" "}
       <span role="img" aria-label="Panama Flag">
         🇵🇦
       </span>
+      . Hospedado en{" "}
+      <a
+        href="https://servidoresrapidos.net/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        SR Apps
+      </a>
     </p>
   </div>
 )
