@@ -19,7 +19,7 @@ const ContactForm = () => {
     },
     onSubmit: async (values) => {
       try {
-        if (formik.saludos !== '') {
+        if (formik.values.saludos !== '') {
           setStatus('error')
           setMessage(errorMessage)
           return
