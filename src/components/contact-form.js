@@ -19,6 +19,11 @@ const ContactForm = () => {
     },
     onSubmit: async (values) => {
       try {
+        if (formik.saludos !== '') {
+          setStatus('error')
+          setMessage(errorMessage)
+          return
+        }
         const response = await fetch('https://api.formik.com/submit/moitorrijos-contact-form/moitorrijoscom-contact-form', {
           method: 'POST',
           headers: {
