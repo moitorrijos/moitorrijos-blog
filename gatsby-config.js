@@ -16,6 +16,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-robots-txt',
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
