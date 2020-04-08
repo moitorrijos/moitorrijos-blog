@@ -110,12 +110,18 @@ $nav-border-radius: 20px
       border: none
       border-bottom-left-radius: $nav-border-radius
 
+      @media screen and ( max-width: 505px )
+        border-radius: 0
+
       &:before
         content: ''
         border: none
 
     &:last-child
       border-bottom-right-radius: $nav-border-radius
+
+      @media screen and ( max-width: 505px )
+        border-radius: 0
 
     &:hover
       background-color: darken($primary-color, 5%)
