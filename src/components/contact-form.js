@@ -4,7 +4,6 @@ import SendIcon from "../components/icons/send-icon"
 import "../styles/_contact-form.sass"
 const errorMessage = 'Disculpa, ha ocurrido un error. Inténtalo de nuevo más tarde o contáctame por WhatsApp con el botón de arriba.'
 
-
 const ContactForm = () => {
   const [ message, setMessage ] = useState('')
   const [ status, setStatus ] = useState('success')
