@@ -8,6 +8,7 @@ module.exports = {
   siteMetadata: {
     title: "Juan Moisés Torrijos",
     siteurl: "https://moitorrijos.com",
+    siteUrl: "https://moitorrijos.com",
     description:
       "Sitio Web de Juan Moisés Torrijos, diseñador y desarrollador web.",
     message:
