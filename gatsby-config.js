@@ -24,7 +24,12 @@ module.exports = {
         policy: [{ userAgent: '*', allow: '/' }]
       }
     },
-    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        sitemapSize: 5000
+      }
+    },
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
