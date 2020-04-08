@@ -16,7 +16,15 @@ module.exports = {
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
-    'gatsby-plugin-robots-txt',
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://moitorrijos.com',
+        sitemap: 'https://moitorrijos.com/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
