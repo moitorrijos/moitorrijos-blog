@@ -8,7 +8,7 @@ const Hero = () => {
     query {
       file(relativePath: { eq: "moitorrijos-2020@2x.png" }) {
         childImageSharp {
-          fluid(maxWidth: 644, maxHeight: 494) {
+          fluid(maxWidth: 1276, maxHeight: 934) {
             ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }
