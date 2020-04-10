@@ -6,9 +6,9 @@ import "../styles/_hero.sass"
 const Hero = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "moitorrijos.png" }) {
+      file(relativePath: { eq: "moitorrijos-2020@2x.png" }) {
         childImageSharp {
-          fluid(maxWidth: 454, maxHeight: 465) {
+          fluid(maxWidth: 644, maxHeight: 494) {
             ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }

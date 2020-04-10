@@ -6,21 +6,28 @@
   color: $white
   padding: 2rem 2rem 0
   height: 90vh
-  max-height: 585px
+  max-height: 570px
   display: flex
   align-items: flex-end
   z-index: 1
 
-  @media screen and ( max-width: 1015px )
+  @media screen and ( max-width: 1050px )
     max-height: none
-    height: 75vh
+    height: 60vh
+
+  @media screen and (max-width: 925px)
+    height: 70vh
+
+  @media screen and (max-width: 780px)
+    padding-top: 120px
+    height: auto
 
   @media screen and ( max-width: 507px )
-    height: auto
+    padding-top: 1.5rem
     align-items: center
 
 .hero-text-image
-  max-width: 980px
+  max-width: 1200px
   width: 100%
   margin: 0 auto
   display: flex
@@ -28,6 +35,7 @@
   align-items: center
   justify-content: center
   transform: translateY($displacement)
+  position: relative
 
   @media screen and ( max-width: 505px )
     transform: translateY(0)
@@ -40,9 +48,12 @@
 
 .hero-text
   text-align: center
-  max-width: 500px
+  max-width: 450px
   padding: 1rem 0
+  transform: translateX(20px)
+  
   @media screen and ( max-width: 505px )
+    transform: translateX(0)
     width: 100%
 
   h1, h2
@@ -71,14 +82,12 @@
 
 .hero-image
   align-self: flex-end
-  transform: translateY(4px)
-  width: 47%
+  width: 50%
+  transform: translateX(-20px)
 
   @media screen and (max-width: 900px)
+    transform: translateX(0)
     width: 60%
 
   @media screen and (max-width: 550px)
     width: 100%
-
-  img
-    transform: translateX(16px)
