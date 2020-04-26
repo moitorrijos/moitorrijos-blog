@@ -68,7 +68,7 @@ const Footer = () => (
       <span role="img" aria-label="Amor">
       ❤️
       </span>{" "}
-      En la Ciudad de Panamá{" "}
+      en la Ciudad de Panamá{" "}
       <span role="img" aria-label="Panama Flag">
         🇵🇦
       </span>
