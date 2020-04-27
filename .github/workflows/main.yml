@@ -32,11 +32,11 @@ jobs:
         # The ssh private key to the dokku instance. WARNING: use a secret! Do not pass a plain text value!
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
         # The user to use for ssh (Default: dokku)
-        dokku-user: dokku # optional, default is dokku
+        dokku-user: ${{ secrets.DOKKU_USER }} # optional, default is dokku
         # The dokku host to ssh into
-        dokku-host: apps.moitorrijos.com
+        dokku-host: ${{ secrets.DOKKU_HOST }}
         # The dokku app name
-        app-name: moitorrijos-website
+        app-name: ${{ secrets.APP_NAME }}
         # The branch to push on the remote repository (Default: master)
         remote-branch: master # optional, default is master
         # Additional flags to be passed to the git push command. Could be used to force push
