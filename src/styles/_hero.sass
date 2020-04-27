@@ -4,57 +4,34 @@
   background-color: darken($primary-color, 10%)
   background-image: $linear-gradient
   color: $white
-  padding: 2rem 2rem 0
-  height: 90vh
-  max-height: 570px
-  display: flex
-  align-items: flex-end
   z-index: 1
-
-  @media screen and ( max-width: 1050px )
-    max-height: none
-    height: 60vh
-
-  @media screen and (max-width: 925px)
-    height: 70vh
-
-  @media screen and (max-width: 780px)
-    padding-top: 120px
-    height: auto
-
-  @media screen and ( max-width: 507px )
-    padding-top: 1.5rem
-    align-items: center
 
 .hero-text-image
   max-width: 1200px
   width: 100%
   margin: 0 auto
-  display: flex
-  flex-flow: row wrap
-  align-items: center
-  justify-content: center
+  pointer-events: none
   transform: translateY($displacement)
   position: relative
+  display: grid
+  grid-template-columns: 1fr 1fr
+  column-gap: 60px
+  align-items: center
+  padding: 6rem 2rem 0
 
-  @media screen and ( max-width: 505px )
+  @media screen and (max-width: 720px)
+    padding-top: 8rem
+    grid-template-columns: 1fr
+
+  @media screen and (max-width: 507px)
+    padding-top: 2rem
     transform: translateY(0)
 
-  @media screen and ( max-width: 507px)
-    height: 100%
-    flex-flow: column
-    justify-content: space-between
-    transform: translateY(0)
+  @media screen and (max-width: 321px)
+    padding: 2rem 1rem 0
 
 .hero-text
   text-align: center
-  max-width: 450px
-  padding: 1rem 0
-  transform: translateX(20px)
-  
-  @media screen and ( max-width: 505px )
-    transform: translateX(0)
-    width: 100%
 
   h1, h2
     font-family: $body-font
@@ -66,28 +43,25 @@
     margin: 0
     font-weight: 600
 
-    @media screen and ( max-width: 505px )
-      font-size: 2rem
+    @media screen and ( max-width: 980px )
+      font-size: 2.4rem
+
+    @media screen and (max-width: 715px)
+      font-size: 1.8rem
+
+    @media screen and (max-width: 321px)
+      font-size: 1.6rem
 
   h2
     font-size: 1.8rem
     font-weight: 400
     letter-spacing: 1px
 
-    @media screen and ( max-width: 505px )
+    @media screen and ( max-width: 980px )
       font-size: 1.3rem
 
-    @media screen and (max-width: 361px)
+    @media screen and (max-width: 715px)
       font-size: 1.2rem
 
-.hero-image
-  align-self: flex-end
-  width: 42%
-  transform: translateX(-20px)
-
-  @media screen and (max-width: 900px)
-    transform: translateX(0)
-    width: 60%
-
-  @media screen and (max-width: 550px)
-    width: 100%
+    @media screen and (max-width: 321px)
+      font-size: 1rem
