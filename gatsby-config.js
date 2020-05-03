@@ -120,6 +120,19 @@ module.exports = {
         icon: 'src/assets/icon.png',
       }
     },
-    'gatsby-plugin-offline'
+    'gatsby-plugin-offline',
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-165424620-1",
+        head: false,
+        anonymize: true,
+        respectDNT: true,
+        pageTransitionDelay: 0,
+        sampleRate: 5,
+        siteSpeedSampleRate: 10,
+        cookieDomain: "moitorrijos.com",
+      },
+    }
   ],
 }
