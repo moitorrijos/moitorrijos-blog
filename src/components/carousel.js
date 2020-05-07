@@ -58,14 +58,14 @@ const Carousel = () => {
   return (
     <div className="container">
       <button
-        className="prev"
+        className="carousel prev"
         onClick={moveLeft}
         aria-label="Previous slide button"
       >
         <img src={prev_icon} alt="Previous" />
       </button>
       <button
-        className="next"
+        className="carousel next"
         onClick={moveRight}
         aria-label="Next slide button"
       >
