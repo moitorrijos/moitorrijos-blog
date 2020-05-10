@@ -8,6 +8,13 @@ import next_icon from "../assets/next-icon.svg"
 const Carousel = () => {
   const data = useStaticQuery(graphql`
     query {
+      llamame: file(relativePath: { eq: "slider/llamame-online-screen.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          }
+        }
+      }
       cotizame: file(relativePath: { eq: "slider/cotizame-screen.jpg" }) {
         childImageSharp {
           fluid {
@@ -45,7 +52,7 @@ const Carousel = () => {
   let displacement = ref.current ? ref.current.offsetWidth : 0
   function moveRight() {
     setPosition((position += 1))
-    if (position > 3) {
+    if (position > 4) {
       setPosition((position = 0))
     }
   }
@@ -89,6 +96,15 @@ const Carousel = () => {
           style={{ transform: `translateX(${-displacement * position}px)` }}
         >
           <Img
+            fluid={data.llamame.childImageSharp.fluid}
+            alt="Llámame Online"
+          />
+        </div>
+        <div
+          className="card"
+          style={{ transform: `translateX(${-displacement * position}px)` }}
+        >
+          <Img
             fluid={data.intermaritime.childImageSharp.fluid}
             alt="InterMaritime"
           />
@@ -108,6 +124,7 @@ const Carousel = () => {
         <span className={position === 1 ? "current-position" : ""}></span>
         <span className={position === 2 ? "current-position" : ""}></span>
         <span className={position === 3 ? "current-position" : ""}></span>
+        <span className={position === 4 ? "current-position" : ""}></span>
       </div>
     </div>
   )

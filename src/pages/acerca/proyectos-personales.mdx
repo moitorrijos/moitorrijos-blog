@@ -9,13 +9,31 @@ export const imageQuery = graphql`
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
-    }    
+    }
+    llamame: file(relativePath: { eq: "llamame-screen-medium.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
+    }
   }
 `
 
 # Mis Proyectos Personales
 
 A continuación hablaré de algunos proyectos personales en los cuales estoy trabajando o he trabajado. Estos proyectos han sido inspiración propia basado en las necesidades de algunos clientes y colaboradores. Todos son de mi propia creación y están protegidos bajo mi propiedad intelectual. Si te gustaría conocer más de ellos o formar parte de uno de ellos o inclusive invertir tus recursos no dudes en <Link to="/contactame">contactarme aquí</Link>.
+
+## Llámame Online
+
+<Img 
+  fluid={props.data.llamame.childImageSharp.fluid}
+  className="small-shadow"
+  alt='Cotizame'
+/>
+
+Llámame Online es un proyecto de mi amigo Roberto Rubio para su empresa <a href="https://servidoresrapidos.net">ServidoresRapidos.net</a>. Está basado en una plataforma gratuita y de código abierto para hacer llamadas y conferencias en línea llamada Jitsi Meet. Está instalado en un servidor dentro de ServidoresRapidos.net y la plantilla fue personalizada por mi. Igualmente participé en la página de inicio (landing page) del sitio. El producto es gratuito, pero tiene una versión de pago el cual incluye la posibilidad de tener tu propio software de video conferencias (a la Zoom) pero con tu propia marca y nombre. Puedes conocer más del proyecto en <a href="https://llamame.online">Llamame.Online</a>.
+
 
 ## Cotiza.me
 
