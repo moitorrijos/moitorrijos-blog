@@ -118,6 +118,7 @@ module.exports = {
         background_color: '#1B33B3',
         theme_color: '#D00000',
         icon: 'src/assets/icon.png',
+        display: `standalone`,
       }
     },
     'gatsby-plugin-offline',
