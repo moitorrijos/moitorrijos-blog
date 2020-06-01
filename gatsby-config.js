@@ -110,6 +110,15 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-matomo',
+      options: {
+        siteId: '2',
+        matomoUrl: 'https://trax.servidoresrapidos.net/',
+        siteUrl: 'https://moitorrijos.com',
+        cookieDomain: '*.moitorrijos.com'
+      }
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: 'MoiTorrijos',
