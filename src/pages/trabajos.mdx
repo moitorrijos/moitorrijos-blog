@@ -1,10 +1,10 @@
-import PageLayout from '../components/pages-layout.js'
-import SEO from '../components/seo.js'
-import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
-import VisitButton from '../components/visit-button.js'
+import PageLayout from "../components/pages-layout.js"
+import SEO from "../components/seo.js"
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
+import VisitButton from "../components/visit-button.js"
 
-export default ({children}) => (
+export default ({ children }) => (
   <PageLayout>
     <SEO title="Mis Trabajos" />
     <h1 className="centered">Mis Trabajos</h1>
@@ -14,38 +14,48 @@ export default ({children}) => (
 
 ## InterMaritime
 
-<Img 
+<Img
   fluid={props.data.intermaritime.childImageSharp.fluid}
   className="medium-image float-right small-shadow image-gap"
-  alt='InterMaritime Website'
+  alt="InterMaritime Website"
 />
 
 [InterMaritime.org](https://intermaritime.org/) Es el sitio web corporativo del Grupo de Empresas InterMaritime, comprendidas por 5 entidades. Construí este sitio creando una plantilla personalizada de WordPress. Luego la convertí a un sitio web estático utilizando un plugin llamado WP2Static. El sitio está hospedado en una cubeta de S3 en Amazon Web Services (AWS). El costo de hospedaje es muy bajo, y la carga del sitio es muy rápida. La misma cuenta con un formulario de contacto el cual se conecta con una función lambda en AWS, de esta manera, el formulario puede enviar correos (entre otras tareas) sin la necesidad de levantar un VPS.
 
-<VisitButton to="https://intermaritime.org/">
-  Visita el sitio
-</VisitButton>
+<VisitButton to="https://intermaritime.org/">Visita el sitio</VisitButton>
 
 ## ICS class
 
-<Img 
+<Img
   fluid={props.data.icsclass.childImageSharp.fluid}
   className="medium-image float-left small-shadow image-gap"
-  alt='ICSClass Website'
+  alt="ICSClass Website"
 />
 
 [ICSClass.org](https://icsclass.org/) Es un sitio web de la empresa más importante del grupo InterMaritime. Este sitio web lo construí con un tema personalizado, creado por mi persona. El tema utiliza el starter [underscores](https://underscores.me/). El sitio cuenta con varias características como buscadores de entradas personalizadas entre otras. Además cuenta con un sistema de análisis de visitantes, un formulario de contáctenos personalizado, y un área para editar noticias y eventos. El sitio está hospedado en un servidor virtual privado (VPS). Todos los cambios al código del sitio se gestionan a través de git, se empujan a un repositorio privado en bitbucket, y luego a un repositorio limpio en el VPS.
 
-<VisitButton to="https://icsclass.org/">
+<VisitButton to="https://icsclass.org/">Visita el sitio</VisitButton>
+
+## 305Media.tv
+
+<Img
+  fluid={props.data.miamimedia.childImageSharp.fluid}
+  className="medium-image float-right small-shadow image-gap"
+  alt="305 Media TV"
+/>
+
+[305Media.tv](http://305media.tv/) es una empresa dedicada a la transmisión de contenido digital desde Miami para el resto del mundo de habla hispana. Su slogan "Gente que habla como tú" refleja su cultura y ambiente. Este sitio fue creado utilizando GatsbyJS. Este sitio fue diseñado y desarrollado por mi persona utilizando AdobeXD y GatsbyJS. Es un sitio completamente estático y se vincula directamente con las redes sociales más importantes de la empreas. Igualmente se conecta con el sitio de videos a la carta onDemand [305OnDemand.com](http://305ondemand.com/es/). El diseño del arte principal de este sitio también fue creado por mi.
+
+<VisitButton to="http://305media.tv/">
   Visita el sitio
 </VisitButton>
 
 ## WordCamp Panamá 2019
 
-<Img 
+<Img
   fluid={props.data.wordcamp.childImageSharp.fluid}
-  className="medium-image float-right small-shadow image-gap"
-  alt='WordCamp Panama 2019 Website'
+  className="medium-image float-left small-shadow image-gap"
+  alt="WordCamp Panama 2019 Website"
 />
 
 Este sitio fue creado para promocionar el evento que se daba por primera vez en la ciudad de Panamá (y en todo el país). Fue creado con muchas limitaciones de parte del organizador del evento WordCamp Central, quienes regulan todo lo que se puede o no se puede hacer en este sitio. El sitio sólo podía actualizarse utilizando un tema prefabricado o un tema totalmente desnudo. Utilicé el tema desnudo para poder estilizarlo a mi propia manera. Usando técnicas avanzadas de CSS pude hacer muchas variantes al sitio para que este fuera muy diferente a todos los sitios para WordCamp en el mundo. Este sitio se puede utilizar como plantailla para otros sitios. Es definitivamente único en su clase.
@@ -54,37 +64,63 @@ Este sitio fue creado para promocionar el evento que se daba por primera vez en 
   Visita el sitio
 </VisitButton>
 
+### Llámame Online
+
+<Img
+  fluid={props.data.llamame.childImageSharp.fluid}
+  className="medium-image float-right small-shadow image-gap"
+  alt="WordCamp Panama 2019 Website"
+/>
+
+[Llámame Online](https://llamame.online/) es una empresa panameña dedicada al servicio de centrales telefónicas en la nube, para las empresas que se necesitan adaptar al teletrabajo. La empresa atiende desde pequeños negocios con pocos colaboradores a call centers distribuidos. Varios de sus clientes tienen colaboradores en diferentes países del mundo. Este sitio web está creado utilizando GatsbyJS como el motor de sitio web estático, para una velocidad de carga muy buena y mejorar así la experiencia de usuario. Adicionalmente, creé un tema personalizado de WooCommerce para la parte de la tienda en línea.
+
+<VisitButton to="https://llamame.online/">
+  Visita el sitio
+</VisitButton>
+
 export const imageQuery = graphql`
   query {
-    intermaritime: file(relativePath: {eq: "trabajos/intermaritime-org-screen-fullsize.png"}) {
+    intermaritime: file(
+      relativePath: { eq: "trabajos/intermaritime-org-screen-fullsize.png" }
+    ) {
       childImageSharp {
-        fluid(
-          cropFocus: NORTH,
-          maxWidth: 500,
-          maxHeight: 300
-        ) {
+        fluid(cropFocus: NORTH, maxWidth: 500, maxHeight: 300) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
-    },
-    icsclass: file(relativePath: {eq: "trabajos/icsclass-org-screen-fullsize.png"}) {
+    }
+    miamimedia: file(
+      relativePath: { eq: "trabajos/miami-media-tv.jpg" }
+    ) {
       childImageSharp {
-        fluid(
-          cropFocus: NORTH,
-          maxWidth: 500,
-          maxHeight: 300
-        ) {
+        fluid(cropFocus: NORTH, maxWidth: 500, maxHeight: 300) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
-    },
-    wordcamp: file(relativePath: {eq: "trabajos/wordcamp-panama-2019-screen-fullsize.png"}) {
+    }
+    icsclass: file(
+      relativePath: { eq: "trabajos/icsclass-org-screen-fullsize.png" }
+    ) {
       childImageSharp {
-        fluid(
-          cropFocus: NORTH,
-          maxWidth: 500,
-          maxHeight: 300
-        ) {
+        fluid(cropFocus: NORTH, maxWidth: 500, maxHeight: 300) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
+    }
+    wordcamp: file(
+      relativePath: { eq: "trabajos/wordcamp-panama-2019-screen-fullsize.png" }
+    ) {
+      childImageSharp {
+        fluid(cropFocus: NORTH, maxWidth: 500, maxHeight: 300) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
+    }
+    llamame: file(
+      relativePath: { eq: "trabajos/llamame-online.png" }
+    ) {
+      childImageSharp {
+        fluid(cropFocus: NORTH, maxWidth: 500, maxHeight: 300) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }

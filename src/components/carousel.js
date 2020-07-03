@@ -8,14 +8,14 @@ import next_icon from "../assets/next-icon.svg"
 const Carousel = () => {
   const data = useStaticQuery(graphql`
     query {
-      llamame: file(relativePath: { eq: "slider/llamame-online-screen.png" }) {
+      miamimedia: file(relativePath: { eq: "slider/miami-media-screen.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }
       }
-      cotizame: file(relativePath: { eq: "slider/cotizame-screen.jpg" }) {
+      llamame: file(relativePath: { eq: "slider/llamame-online-screen.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid_withWebp_tracedSVG
@@ -83,7 +83,7 @@ const Carousel = () => {
           className="card"
           style={{ transform: `translateX(${-displacement * position}px)` }}
         >
-          <Img fluid={data.cotizame.childImageSharp.fluid} alt="Cotizame" />
+          <Img fluid={data.llamame.childImageSharp.fluid} alt="Cotizame" />
         </div>
         <div
           className="card"
@@ -96,7 +96,7 @@ const Carousel = () => {
           style={{ transform: `translateX(${-displacement * position}px)` }}
         >
           <Img
-            fluid={data.llamame.childImageSharp.fluid}
+            fluid={data.miamimedia.childImageSharp.fluid}
             alt="Llámame Online"
           />
         </div>
