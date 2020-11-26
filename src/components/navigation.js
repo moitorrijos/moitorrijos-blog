@@ -12,7 +12,6 @@ const Navigation = () => (
   <div className="navigation">
     <Link to="/" activeClassName="current-page" className="logo-nav">
       <MoiTorrijosLogo />
-      Inicio
     </Link>
     <Link to="/acerca" activeClassName="current-page" partiallyActive={true}>
       <img src={acerca} alt="Acerca de mi" />

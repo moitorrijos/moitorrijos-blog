@@ -2,43 +2,36 @@
 $nav-border-radius: 20px
 
 .navigation
-  background-color: #1B33B3
   display: grid
   grid-template-columns: repeat(6, 1fr)
   align-items: stretch
   justify-content: space-around
   max-width: $max-container-width
   width: 100%
-  border-bottom-left-radius: $nav-border-radius
-  border-bottom-right-radius: $nav-border-radius
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.20%)
   position: absolute
-  top: 0
+  top: 1rem
   left: 50%
   transform: translateX(-50%)
   font-size: 0.9rem
 
   .logo-nav
-        padding: 0
+    padding: 0
+
+    svg
+      height: 100px
+
+      @media (max-width: 768px)
+        height: 60px
 
   svg
-    fill: $light-gray
+    fill: #ffffff
 
   @media screen and ( max-width: 953px )
     left: 0
     transform: translateX(0)
-    border-radius: 0
 
   @media screen and ( max-width: 750px )
     font-size: 0.6rem
-
-  @media screen and ( max-width: 505px )
-    position: fixed
-    bottom: 0
-    top: initial
-    transform: transitionY(-80px)
-    height: $mobile-menu-height
-    z-index: 10
     
   a
     display: flex
@@ -46,7 +39,6 @@ $nav-border-radius: 20px
     align-items: center
     flex-grow: 1
     position: relative
-    border-left: 1px solid darken($primary-color, 15%)
     transition: all 0.25s ease-in-out
     color: $white
     display: flex
@@ -54,13 +46,19 @@ $nav-border-radius: 20px
     justify-content: center
     align-items: center
     text-align: center
-    padding: 1.2rem 3rem
+    padding: 2rem 3rem
 
     @media screen and ( max-width: 1200px )
       padding: 1rem
 
     &.current-page
-      background-color: darken($primary-color, 7%)
+      background-color: transparentize($light-gray, 0.9)
+
+      @media screen and ( max-width: 768px)
+        background-color: transparent
+
+      &.logo-nav
+        background-color: transparent
 
     img
       opacity: 0.8
@@ -98,33 +96,8 @@ $nav-border-radius: 20px
       @media screen and (max-width: 500px)
         height: 30px
 
-    &:before
-      content: ''
-      position: absolute
-      left: 0
-      top: 0
-      height: 100%
-      border-left: 1px solid lighten($primary-color, 15%)
-
-    &:first-child
-      border: none
-      border-bottom-left-radius: $nav-border-radius
-
-      @media screen and ( max-width: 505px )
-        border-radius: 0
-
-      &:before
-        content: ''
-        border: none
-
-    &:last-child
-      border-bottom-right-radius: $nav-border-radius
-
-      @media screen and ( max-width: 505px )
-        border-radius: 0
-
     &:hover
-      background-color: darken($primary-color, 5%)
+      background-color: transparentize($light-gray, 0.95)
 
     @media screen and (max-width: 1200px)
       border-radius: 0

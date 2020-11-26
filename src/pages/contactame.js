@@ -21,7 +21,7 @@ const ContactPage = () => (
               target="_blank"
               rel="noopener noreferrer"
             >
-              Haz click aquí para conversar conmigo por WhatsApp{" "}
+              click aquí para hablar por WhatsApp{" "}
               <WhatsappIcon />
             </a>
             <br />o llena el formulario abajo y te contactaré muy pronto.

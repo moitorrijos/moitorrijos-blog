@@ -56,28 +56,28 @@ export const imageQuery = graphql`
     webDesign: file(relativePath: {eq: "web-design.png"}) {
       childImageSharp {
         fluid(maxWidth: 500) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     },
     fastWeb: file(relativePath: {eq: "fast-web.png"}) {
       childImageSharp {
         fluid(maxWidth: 500) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
     responsive: file(relativePath: {eq: "responsive-web.png"}) {
       childImageSharp {
         fluid(maxWidth: 500) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     },
     siteDesign: file(relativePath: {eq: "site-design.png"}) {
       childImageSharp {
         fluid(maxWidth: 500) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     },

@@ -1,15 +1,20 @@
 @import 'variables'
   
 .header-image
-  height: 12rem
+  height: 148px
+  border-top: 1rem solid $primary-color
+  border-bottom: 1rem solid $secondary-color
   background:
     image: $linear-gradient
     repeat: no-repeat
     size: cover
     position: center top
 
-  @media screen and (max-width: 1200px)
-    height: 9rem
+  @media screen and (max-width: 768px)
+    height: 120px
+    border-top: 0.5rem solid $primary-color
+    border-bottom: 0.5rem solid $secondary-color
 
-  @media screen and (max-width: 505px)
-    height: 1.5rem
+  @media (max-width: 411px)
+    height: 100px
+

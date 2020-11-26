@@ -6,7 +6,7 @@ export const imageQuery = graphql`
     ciudad_panama: file(relativePath: { eq: "ciudad-panama-pacifico.jpg"}) {
       childImageSharp {
         fluid(maxWidth: 700) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }

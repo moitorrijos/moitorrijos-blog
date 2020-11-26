@@ -12,28 +12,29 @@ ul.about-menu
       display: flex
       flex-flow: row nowrap
       align-items: center
-      color: $dark-color
+      color: $primary-color
       transition: all 0.25s ease-in-out
       border-radius: 2rem
       padding: 2px
       padding-right: 20px
-      background-color: lighten($dark-color, 20%)
+      background-color: $primary-color
       color: $white
 
       &.current-menu-page
-        background-color: $dark-color
+        background-color: darken($primary-color, 15%)
 
       img, svg
         margin-right: 10px
         width: 40px
         height: 40px
+        filter: drop-shadow(1px 0 2px rgba(0, 0, 0, 0.15))
 
         @media screen and (max-width: 900px)
           width: 35px  
           height: 35px
 
     &:hover a
-      background-color: lighten($dark-color, 10%)
+      background-color: darken($primary-color, 10%)
 
   @media screen and (max-width: 900px)
     font-size: 0.7rem

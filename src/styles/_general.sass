@@ -13,9 +13,10 @@ h1, h2, h3, h4, h5, h6
   font-weight: 600
   line-height: 1.1
   font-family: $header-font
+  color: darken($primary-color, 10%)
 
 h1
-  font-size: 2.4rem
+  font-size: 2.3rem
   margin: 1rem 0
 
 h2
@@ -122,20 +123,13 @@ hr
 
 .main-content
   @extend %outer-container
-  border-top: 1rem solid $primary-color
   background-color: $light-gray
-  box-shadow: 0 4px 12px rgba(4, 4, 4, 0.15%)
-  border-radius: 8px
-  margin-top: $displacement
   z-index: 2
   display: flex
   flex-flow: row wrap
 
-  @media screen and (max-width: 1200px)
-    border-radius: 0
-
-  @media screen and (max-width: 505px)
-    margin-top: 0
+  @media screen and (max-width: 768px)
+    padding-top: 0
 
   .inner-main-content
     max-width: 630px
@@ -156,6 +150,7 @@ hr
   margin: 0 auto
   line-height: 1.1
   font-size: 1.2rem
+  text-align: center
 
 .medium-centered
   max-width: 800px

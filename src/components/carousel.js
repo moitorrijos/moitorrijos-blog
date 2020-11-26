@@ -11,21 +11,21 @@ const Carousel = () => {
       miamimedia: file(relativePath: { eq: "slider/miami-media-screen.jpg" }) {
         childImageSharp {
           fluid {
-            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }
       llamame: file(relativePath: { eq: "slider/llamame-online-screen.png" }) {
         childImageSharp {
           fluid {
-            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }
       icsclass: file(relativePath: { eq: "slider/icsclass-screen.jpg" }) {
         childImageSharp {
           fluid {
-            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }
@@ -34,14 +34,14 @@ const Carousel = () => {
       ) {
         childImageSharp {
           fluid {
-            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }
       wordcamp: file(relativePath: { eq: "slider/wordcamp-screen.jpg" }) {
         childImageSharp {
           fluid {
-            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }

@@ -9,7 +9,7 @@ const Index = () => (
   <MainLayout title="Inicio">
     <SEO title="Juan Moisés Torrijos Diseñador y Programador Web" />
     <Hero />
-    <div className="main-content">
+    <div className="main-content home-content">
       <h2 className="centered reg-ch tall-line regular body-font">
         ¡Hola! mi nombre es <strong>Juan Moisés Torrijos</strong>, soy{" "}
         <strong>diseñador y desarrollador</strong>&nbsp; de{" "}

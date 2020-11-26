@@ -1,15 +1,15 @@
 import React from "react"
 import Img from "gatsby-image"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, Link, useStaticQuery } from "gatsby"
 import "../styles/_hero.sass"
 
 const Hero = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "juan-moises-torrijos-2020-2.png" }) {
+      file(relativePath: { eq: "juan-moises-torrijos-2020-3.png" }) {
         childImageSharp {
-          fluid(maxWidth: 615, maxHeight: 518) {
-            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          fluid(maxWidth: 615, maxHeight: 620) {
+            ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }
@@ -19,8 +19,21 @@ const Hero = () => {
     <div className="main-hero">
       <div className="hero-text-image">
         <div className="hero-text">
-          <h2>Diseñador y Desarrollador de</h2>
-          <h1>Aplicaciones Web</h1>
+          <h2>Experto en Creación de</h2>
+          <h1>Sitios y Aplicaciones Web</h1>
+          <ul>
+            <li>eCommerce</li>
+            <li>Sitios y Apps Web</li>
+            <li>Apps Móviles</li>
+          </ul>
+          <div className="buttons">
+            <Link to="/contactame" className="hero-button">
+              Contáctame
+            </Link>
+            <Link to="/trabajos">
+              Conoce Mis Trabajos
+            </Link>
+          </div>
         </div>
         <Img
           className="hero-image"
