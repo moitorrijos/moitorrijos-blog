@@ -32,19 +32,11 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: 'gatsby-plugin-web-font-loader',
       options: {
-        fonts: [
-          {
-            family: 'Bebas Neue',
-            subset: ['latin']
-          },
-          {
-            family: 'Raleway',
-            subset: ['latin'],
-            variants: ['400','400i','500i','700']
-          }
-        ]
+        google: {
+          families: ['Bebas Neue', 'Raleway:wght@300;400;500']
+        }
       }
     },
     {
