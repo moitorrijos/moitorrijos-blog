@@ -35,7 +35,7 @@ const PostsLayout = ({ data: {mdx} }) => (
               cover
               bg="#1D38C7"
               direction="top"
-              duration={0.25}
+              duration={0.5}
               className="back-to-blog"
               to="/blog"
             >

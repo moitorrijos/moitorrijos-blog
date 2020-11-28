@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Carousel from "../../components/carousel"
 import portfolio from "../../assets/portfolio.svg"
 import "../../styles/_portfolio-carousel.sass"
@@ -23,10 +23,16 @@ const Portfolio = () => {
           dispositivo y duraderos.{" "}
           <strong>Convertirán a tus visitantes en clientes.</strong>
         </p>
-        <Link to="/trabajos" className="small-button">
+        <AniLink
+          cover
+          bg="#1D38C7"
+          direction="left"
+          to="/trabajos"
+          className="small-button"
+        >
           <img src={portfolio} alt="Mis Trabajos" />
           Mis Trabajos
-        </Link>
+        </AniLink>
       </div>
     </div>
   )
