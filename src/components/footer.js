@@ -7,11 +7,11 @@ import BehanceIcon from "./icons/behance-icon"
 import WordpressIcon from "./icons/wordpress-icon"
 import CodepenIcon from "./icons/codepen-icon"
 import GithubIcon from "./icons/github-icon"
-// import DribbbleIcon from "./icons/dribbble-icon"
+import DribbbleIcon from "./icons/dribbble-icon"
 import "../styles/_footer.sass"
 
 const Footer = () => (
-  <div id="footer" className="footer-container">
+  <footer id="footer" className="footer-container">
     <div className="footer-columns">
       <div className="footer-column footer-logo">
         <div className="footer-about">
@@ -58,6 +58,7 @@ const Footer = () => (
           <LinkedinIcon />
           <WordpressIcon />
           <BehanceIcon />
+          <DribbbleIcon />
           <CodepenIcon />
           <GithubIcon />
         </div>
@@ -82,7 +83,7 @@ const Footer = () => (
         SR Apps
       </a>
     </p>
-  </div>
+  </footer>
 )
 
 export default Footer
