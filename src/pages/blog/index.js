@@ -1,15 +1,9 @@
 import React from "react"
 import MainLayout from "../../components/main-layout"
 import Header from "../../components/header"
-import { Link, graphql, useStaticQuery } from "gatsby"
-import TwitterIcon from "../../components/icons/twitter-icon"
-import InstagramIcon from "../../components/icons/instagram-icon"
-import LinkedinIcon from "../../components/icons/linkedin-icon"
-import BehanceIcon from "../../components/icons/behance-icon"
-import WordpressIcon from "../../components/icons/wordpress-icon"
-import CodepenIcon from "../../components/icons/codepen-icon"
-import GithubIcon from "../../components/icons/github-icon"
-import DribbbleIcon from "../../components/icons/dribbble-icon"
+import { graphql, useStaticQuery } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+import SocialSidebar from "../../components/social-sidebar.js"
 import "../../styles/_blog.sass"
 
 const BlogPage = () => {
@@ -44,32 +38,33 @@ const BlogPage = () => {
             {data.allMdx.edges.map(post => {
               return (
                 <article className="post" key={post.node.id}>
-                  <Link to={post.node.fields.slug}>
+                  <AniLink
+                    cover
+                    bg="#1D38C7"
+                    direction="top"
+                    to={post.node.fields.slug}
+                    className="blog-link-header"
+                  >
                     <h2>{post.node.frontmatter.title}</h2>
-                  </Link>
+                  </AniLink>
                   <p className="date">
                     Publicado el {post.node.frontmatter.date}
                   </p>
                   <p>
                     {post.node.excerpt}{" "}
-                    <Link to={post.node.fields.slug}>Lea más.</Link>
+                    <AniLink
+                      cover
+                      bg="#1D38C7"
+                      direction="top"
+                      duration={0.25}
+                      to={post.node.fields.slug}
+                    >Lea más.</AniLink>
                   </p>
                 </article>
               )
             })}
           </div>
-          <aside>
-            <div className="sidebar-social-icons">
-              <TwitterIcon />
-              <InstagramIcon />
-              <LinkedinIcon />
-              <WordpressIcon />
-              <BehanceIcon />
-              <DribbbleIcon />
-              <CodepenIcon />
-              <GithubIcon />
-            </div>
-          </aside>
+          <SocialSidebar />
         </div>
       </div>
     </MainLayout>

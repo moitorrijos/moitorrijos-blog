@@ -1,5 +1,22 @@
 @import 'variables'
 
+.back-to-blog
+  font-family: $header-font
+  font-size: 1.2rem
+  padding: 1rem 0
+  display: block
+  color: darken($primary-color, 10%)
+  transition: all 0.25s ease-in-out
+
+  &:hover
+    transform: translateX(5px)
+
+.blog-link-header
+  transition: all 0.25s ease-in-out
+
+  &:hover
+    transform: translateX(5px)
+
 .blog-columns
   display: flex
   flex-flow: row nowrap
@@ -10,7 +27,7 @@
 
 aside
   width: 220px
-  margin-top: 2rem
+  margin-top: 4rem
 
   @media (max-width: 411px)
     display: none

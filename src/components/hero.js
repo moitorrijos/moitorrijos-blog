@@ -1,6 +1,7 @@
 import React from "react"
 import Img from "gatsby-image"
-import { graphql, Link, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import "../styles/_hero.sass"
 
 const Hero = () => {
@@ -27,12 +28,25 @@ const Hero = () => {
             <li>Apps Móviles</li>
           </ul>
           <div className="buttons">
-            <Link to="/contactame" className="hero-button">
+            <AniLink
+              cover
+              bg="#1D38C7"
+              direction="left"
+              duration={0.5}
+              to="/contactame"
+              className="hero-button"
+            >
               Contáctame
-            </Link>
-            <Link to="/trabajos">
+            </AniLink>
+            <AniLink
+              cover
+              bg="#1D38C7"
+              direction="left"
+              duration={0.5}
+              to="/trabajos"
+            >
               Conoce Mis Trabajos
-            </Link>
+            </AniLink>
           </div>
         </div>
         <Img

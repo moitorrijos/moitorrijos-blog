@@ -1,5 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import MoiTorrijosLogo from "./icons/moi-logo"
 import blog from "../assets/blogging.svg"
 import acerca from "../assets/acerca-de-mi.svg"
@@ -10,29 +11,73 @@ import "../styles/_navigation.sass"
 
 const Navigation = () => (
   <div className="navigation">
-    <Link to="/" activeClassName="current-page" className="logo-nav">
+    <AniLink 
+      cover
+      bg="#1D38C7"
+      direction="left"
+      to="/"
+      activeClassName="current-page"
+      className="logo-nav"
+      duration={0.5}
+    >
       <MoiTorrijosLogo />
-    </Link>
-    <Link to="/acerca" activeClassName="current-page" partiallyActive={true}>
+    </AniLink>
+    <AniLink
+      cover
+      bg="#1D38C7"
+      direction="left"
+      to="/acerca"
+      activeClassName="current-page"
+      partiallyActive={true}
+      duration={0.5}
+    >
       <img src={acerca} alt="Acerca de mi" />
       De Mi
-    </Link>
-    <Link to="/servicios" activeClassName="current-page">
+    </AniLink>
+    <AniLink
+      cover
+      bg="#1D38C7"
+      direction="left"
+      to="/servicios"
+      activeClassName="current-page"
+      duration={0.5}
+    >
       <img src={love} alt="Mis Servicios" />
       Servicios
-    </Link>
-    <Link to="/trabajos" activeClassName="current-page">
+    </AniLink>
+    <AniLink
+      cover
+      bg="#1D38C7"
+      direction="left"
+      to="/trabajos"
+      activeClassName="current-page"
+      duration={0.5}
+    >
       <img src={portfolio} alt="Mis Trabajos" />
       Trabajos
-    </Link>
-    <Link to="/blog" activeClassName="current-page">
+    </AniLink>
+    <AniLink
+      cover
+      bg="#1D38C7"
+      direction="left"
+      to="/blog"
+      activeClassName="current-page"
+      duration={0.5}
+    >
       <img src={blog} alt="Blog icon" />
       Blog
-    </Link>
-    <Link to="/contactame" activeClassName="current-page">
+    </AniLink>
+    <AniLink
+      cover
+      bg="#1D38C7"
+      direction="left"
+      to="/contactame"
+      activeClassName="current-page"
+      duration={0.5}
+    >
       <img src={mail} alt="Contáctame" />
       Contacto
-    </Link>
+    </AniLink>
   </div>
 )
 

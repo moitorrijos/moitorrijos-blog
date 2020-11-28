@@ -1,5 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import about from "../assets/about.svg"
 import curriculum from "../assets/curriculum.svg"
 import projects from "../assets/project-about.svg"
@@ -9,31 +10,48 @@ import "../styles/_about-menu.sass"
 const AboutMenu = () => (
   <ul className="about-menu">
     <li>
-      <Link to="/acerca" activeClassName="current-menu-page">
+      <AniLink
+        to="/acerca"
+        activeClassName="current-menu-page"
+        fade
+        duration={0.5}
+      >
         <img src={about} alt="Acerca de Mi" />
         Acerca de Mi
-      </Link>
+      </AniLink>
     </li>
     <li>
-      <Link to="/acerca/curriculum" activeClassName="current-menu-page">
+      <AniLink
+        to="/acerca/curriculum"
+        activeClassName="current-menu-page"
+        fade
+        duration={0.5}
+      >
         <img src={curriculum} alt="Curriculum" />
         Curriculum Vitae
-      </Link>
+      </AniLink>
     </li>
     <li>
-      <Link to="/acerca/comunidades" activeClassName="current-menu-page">
+      <AniLink
+        to="/acerca/comunidades"
+        activeClassName="current-menu-page"
+        fade
+        duration={0.5}
+      >
         <img src={comunidad} alt="comunidades" />
         Comunidades
-      </Link>
+      </AniLink>
     </li>
     <li>
-      <Link
+      <AniLink
         to="/acerca/proyectos-personales"
         activeClassName="current-menu-page"
+        fade
+        duration={0.5}
       >
         <img src={projects} alt="Proyectos Personales" />
         Proyectos Personales
-      </Link>
+      </AniLink>
     </li>
   </ul>
 )
