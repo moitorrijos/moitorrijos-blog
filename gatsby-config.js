@@ -61,13 +61,6 @@ module.exports = {
         path: `${__dirname}/src/assets/slider`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: "posts",
-        path: `${__dirname}/src/posts`,
-      },
-    },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     {

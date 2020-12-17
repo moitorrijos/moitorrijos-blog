@@ -100,7 +100,7 @@ hr
   @media screen and (max-width: 500px)
     margin: 2rem 0
 
-.space-below
+.space-bellow
   margin-bottom: 5rem
 
 .bottom-spacing
@@ -223,7 +223,15 @@ hr
   box-shadow: $box-shadow
 
 .transparent-shadow
-  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.15))
+  filter: drop-shadow(0 6px 24px rgba(0, 0, 0, 0.15))
+
+.image-shadow.image-shadow.image-shadow
+  img
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15)
+
+.border-radius-image
+  img
+    border-radius: 16px
 
 .small-border
   border-radius: 1rem
@@ -243,3 +251,14 @@ hr
 @media screen and (min-width: 710px)
   .span2
     grid-column: span 2
+
+.grid-content-50
+  display: grid
+  grid-template-columns: 1fr 1fr
+  justify-content: space-between
+  
+.align-center
+  align-items: center
+
+.gap-40
+  gap: 40px

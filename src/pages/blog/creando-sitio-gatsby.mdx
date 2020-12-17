@@ -4,8 +4,26 @@ date: 27 de Marzo de 2020
 type: post
 ---
 
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
+import Link from 'gatsby-link'
+
+export const imageQuery = graphql`
+  query {
+    reactCode: file(relativePath: {eq: "react-code.jpg"}) {
+      childImageSharp {
+        fluid(maxWidth: 700) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+  }
+`
+
+<Img
+  fluid={props.data.reactCode.childImageSharp.fluid}
+  alt='Código de React'
+/>
 
 Existen tantas formas de crear un sitio web que tomar la decisión de qué tecnología utilizar es una gran tarea. Debes tener una lista de todas las cosas importantes que tu sitio web necesita: 
 - Que se vea profesional.
