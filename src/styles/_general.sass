@@ -259,6 +259,12 @@ hr
   display: grid
   grid-template-columns: 1fr 1fr
   justify-content: space-between
+
+  @media only screen and (max-width: 768px)
+    grid-template-columns: 1fr
+
+    .order-0
+      order: 0
   
 .align-center
   align-items: center
