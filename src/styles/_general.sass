@@ -181,7 +181,6 @@ hr
   transform: scale(0.9)
   margin: 
     top: 1rem
-    bottom: 3rem
 
 .small-image, .medium-image
   width: 100% 
@@ -227,11 +226,15 @@ hr
 
 .image-shadow.image-shadow.image-shadow
   img
-    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15)
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 6px 24px rgba(0, 0, 0, 0.1)
 
 .border-radius-image
   img
     border-radius: 16px
+
+.inner-img-medium-border
+  img
+    border: 8px solid $white
 
 .small-border
   border-radius: 1rem
@@ -262,3 +265,8 @@ hr
 
 .gap-40
   gap: 40px
+  
+.grid-item
+  align-self: center
+  h1, h2, h3
+    margin-top: 0

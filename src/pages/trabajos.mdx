@@ -14,6 +14,29 @@ export default ({ children }) => (
 
 <div class="grid-content-50 align-center gap-40 space-bellow">
 
+<Img
+fluid={props.data.concordsecurity.childImageSharp.fluid}
+className="medium-image inner-img-medium-border image-shadow border-radius-image"
+style={{ overflow: "visible" }}
+alt="ICSClass Website"
+/>
+
+<div class="grid-item">
+
+## Concord Security
+
+[ConcordSecurity.com.pa](https://concordsecurity.com.pa/) Es el sitio web de una de las más exitosas empresas de seguridad física y electrónica en Panamá. Establecida en el año 1998, la empresa se dedica a proporcionar servicios para Empresas, Hogares y Eventos en la ciudad de Panamá y aledaños. También cuentan con seguridad especializada para puertos. Cuentan con una gran gama de tecnología a su disposición. Este sitio fue creado con un tema personalizado basado en [underscores](https://underscores.me) siguiendo los lineamientos establecidos por la guía de marca. Creando una coherencia entre el sitio web y el resto de sus canales de comunicación en redes sociales.
+
+<VisitButton to="https://concordsecurity.com.pa/">
+Visita el sitio
+</VisitButton>
+
+</div>
+
+</div>
+
+<div class="grid-content-50 align-center gap-40 space-bellow">
+
 <div class="grid-item">
 
 ## InterMaritime
@@ -28,7 +51,8 @@ Visita el sitio
 
 <Img
 fluid={props.data.intermaritime.childImageSharp.fluid}
-className="medium-image image-shadow border-radius-image"
+className="medium-image inner-img-medium-border image-shadow border-radius-image"
+style={{ overflow: "visible" }}
 alt="InterMaritime Website"
 />
 
@@ -38,7 +62,8 @@ alt="InterMaritime Website"
 
 <Img
 fluid={props.data.icsclass.childImageSharp.fluid}
-className="medium-image image-shadow border-radius-image"
+className="medium-image inner-img-medium-border image-shadow border-radius-image"
+style={{ overflow: "visible" }}
 alt="ICSClass Website"
 />
 
@@ -72,7 +97,8 @@ Visita el sitio
 
 <Img
 fluid={props.data.miamimedia.childImageSharp.fluid}
-className="medium-image image-shadow border-radius-image"
+className="medium-image inner-img-medium-border image-shadow border-radius-image"
+style={{ overflow: "visible" }}
 alt="305 Media TV"
 />
 
@@ -82,7 +108,8 @@ alt="305 Media TV"
 
 <Img
 fluid={props.data.wordcamp.childImageSharp.fluid}
-className="medium-image image-shadow border-radius-image"
+className="medium-image inner-img-medium-border image-shadow border-radius-image"
+style={{ overflow: "visible" }}
 alt="WordCamp Panama 2019 Website"
 />
 
@@ -116,7 +143,8 @@ Visita el sitio
 
 <Img
 fluid={props.data.llamame.childImageSharp.fluid}
-className="medium-image image-shadow border-radius-image"
+className="medium-image inner-img-medium-border image-shadow border-radius-image"
+style={{ overflow: "visible" }}
 alt="WordCamp Panama 2019 Website"
 />
 
@@ -124,11 +152,20 @@ alt="WordCamp Panama 2019 Website"
 
 export const imageQuery = graphql`
   query {
+    concordsecurity: file(
+      relativePath: { eq: "trabajos/concordsecurity.png" }
+    ) {
+      childImageSharp {
+        fluid(cropFocus: NORTH, maxWidth: 500, maxHeight: 550) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
     intermaritime: file(
       relativePath: { eq: "trabajos/intermaritime-org-screen-fullsize.png" }
     ) {
       childImageSharp {
-        fluid(cropFocus: NORTH, maxWidth: 500, maxHeight: 450) {
+        fluid(cropFocus: NORTH, maxWidth: 500, maxHeight: 550) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
@@ -137,7 +174,7 @@ export const imageQuery = graphql`
       relativePath: { eq: "trabajos/miami-media-tv.jpg" }
     ) {
       childImageSharp {
-        fluid(cropFocus: NORTH, maxWidth: 500, maxHeight: 450) {
+        fluid(cropFocus: NORTH, maxWidth: 500, maxHeight: 550) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
@@ -146,7 +183,7 @@ export const imageQuery = graphql`
       relativePath: { eq: "trabajos/icsclass-org-screen-fullsize.png" }
     ) {
       childImageSharp {
-        fluid(cropFocus: NORTH, maxWidth: 500, maxHeight: 450) {
+        fluid(cropFocus: NORTH, maxWidth: 500, maxHeight: 550) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
@@ -155,7 +192,7 @@ export const imageQuery = graphql`
       relativePath: { eq: "trabajos/wordcamp-panama-2019-screen-fullsize.png" }
     ) {
       childImageSharp {
-        fluid(cropFocus: NORTH, maxWidth: 500, maxHeight: 450) {
+        fluid(cropFocus: NORTH, maxWidth: 500, maxHeight: 550) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
@@ -164,7 +201,7 @@ export const imageQuery = graphql`
       relativePath: { eq: "trabajos/llamame-online.png" }
     ) {
       childImageSharp {
-        fluid(cropFocus: NORTH, maxWidth: 500, maxHeight: 450) {
+        fluid(cropFocus: NORTH, maxWidth: 500, maxHeight: 550) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }

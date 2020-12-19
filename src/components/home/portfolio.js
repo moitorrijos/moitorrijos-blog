@@ -8,7 +8,7 @@ const Portfolio = () => {
   
   return (
     <div className="home-portfolio space-between">
-      <div className="image-portfolio">
+      <div className="image-portfolio image-shadow">
         <Carousel />
       </div>
       <div className="text-portfolio">
