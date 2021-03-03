@@ -15,6 +15,7 @@
     "heroku-postbuild": "gatsby build"
   },
   "dependencies": {
+    "@babel/plugin-transform-spread": "^7.12.1",
     "@mdx-js/mdx": "^1.6.16",
     "@mdx-js/react": "^1.6.16",
     "axios": ">=0.21.1",
